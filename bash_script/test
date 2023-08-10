@@ -1,0 +1,16 @@
+#!/bin/bash
+
+n=$2
+ip=$1
+chan=0
+
+for i in $(seq 1 $n)
+do
+for chan in $(seq 0 5)
+do
+echo "Writting to channel${chan}: "
+iio_attr -u ip:${ip} -c ad5592r_s voltage${chan} raw $i
+done
+sleep 1
+done
+
