@@ -1,0 +1,13 @@
+#!/bin/bash
+
+n=$1
+can=0
+for i in $(seq 1 $n)
+do
+for can in $(seq 0 5)
+do
+echo "wretting to channel ${can}: "
+iio_attr -u ip:10.76.84.156 -c ad5592r_s voltage${can} raw $(($i + $can))
+done
+sleep 1
+done
