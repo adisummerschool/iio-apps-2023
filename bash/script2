@@ -1,0 +1,23 @@
+# create a simple bash script to increment an attribute to from 1 to "n" every second
+
+
+#!/usr/bin/bash
+
+#set device name
+DEVICE_NAME="ad5592r_s"
+
+#set channel name
+echo "Enter channel number:"
+read CHANNEL_NUMBER
+CHANNEL_NAME=voltage"$CHANNEL_NUMBER"
+
+#set period of time
+echo "Enter time period (s):"
+read TIME
+
+#increment channel value every 1 second for TIME seconds
+for i in $(seq 1 $TIME)
+do
+    iio_attr -u ip:10.76.84.206 -c "${DEVICE_NAME}" $CHANNEL_NAME raw $i
+    sleep 1;  #increment every 1 second
+done

@@ -1,0 +1,12 @@
+# create a script to write voltage_x raw attribute to x
+
+
+#!/usr/bin/bash
+
+DEVICE_NAME="ad5592r_s"
+
+for i in {0..5}
+do
+    iio_attr -u ip:10.76.84.206 -c "${DEVICE_NAME}" voltage0 raw $i
+done
+
