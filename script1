@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo 'Enter the end value n = '
+read n
+echo "Voltage3 will be incremented $n times"
+
+for i in $(seq 1 1 $n)
+do
+    iio_attr -u ip:10.76.84.206 -c ad5592r_s voltage3 raw $i
+    sleep 1s
+done    

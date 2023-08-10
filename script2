@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in $(seq 0 1 5)
+do
+    iio_attr -u ip:10.76.84.206 -c ad5592r_s voltage$i raw $i
+done 
