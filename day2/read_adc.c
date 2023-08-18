@@ -46,20 +46,23 @@ int main() {
 	char chn3_voltage[50];
 	char chn4_voltage[50];
 	char chn5_voltage[50];
-	
-	iio_channel_attr_read(chn0, "raw", chn0_voltage, 50);
-	printf("Xpoz = %s = %lfV = %lfg  ", chn0_voltage, (atoi(chn0_voltage) * 2.5) / 4095, atoi(chn0_voltage) / 4095.0);
-	iio_channel_attr_read(chn2, "raw", chn2_voltage, 50);
-	printf("Ypoz = %s = %lfV = %lfg ", chn0_voltage, (atoi(chn2_voltage) * 2.5) / 4095, atoi(chn2_voltage) / 4095.0);
-	iio_channel_attr_read(chn4, "raw", chn4_voltage, 50);
-	printf("Zpoz = %s = %lfV = %lfg\n", chn0_voltage, (atoi(chn4_voltage) * 2.5) / 4095, atoi(chn4_voltage) / 4095.0);
+	while(0)
+	{
+		iio_channel_attr_read(chn0, "raw", chn0_voltage, 50);
+		printf("Xpoz = %s = %lfV = %lfg  ", chn0_voltage, (atoi(chn0_voltage) * 2.5) / 4095, atoi(chn0_voltage) / 4095.0);
+		iio_channel_attr_read(chn2, "raw", chn2_voltage, 50);
+		printf("Ypoz = %s = %lfV = %lfg ", chn0_voltage, (atoi(chn2_voltage) * 2.5) / 4095, atoi(chn2_voltage) / 4095.0);
+		iio_channel_attr_read(chn4, "raw", chn4_voltage, 50);
+		printf("Zpoz = %s = %lfV = %lfg\n", chn0_voltage, (atoi(chn4_voltage) * 2.5) / 4095, atoi(chn4_voltage) / 4095.0);
 
-	iio_channel_attr_read(chn1, "raw", chn1_voltage, 50);
-	printf("Xneg = %s = %lfV = %lfg  ", chn0_voltage, (atoi(chn1_voltage) * 2.5) / 4095, atoi(chn1_voltage) / 4095.0);
-	iio_channel_attr_read(chn3, "raw", chn3_voltage, 50);
-	printf("Yneg = %s = %lfV = %lfg  ", chn0_voltage, (atoi(chn3_voltage) * 2.5) / 4095, atoi(chn3_voltage) / 4095.0);
-	iio_channel_attr_read(chn5, "raw", chn5_voltage, 50);
-	printf("Zneg = %s = %lfV = %lfg\n\n\n", chn0_voltage, (atoi(chn5_voltage) * 2.5) / 4095, atoi(chn5_voltage) / 4095.0);
+		iio_channel_attr_read(chn1, "raw", chn1_voltage, 50);
+		printf("Xneg = %s = %lfV = %lfg  ", chn0_voltage, (atoi(chn1_voltage) * 2.5) / 4095, atoi(chn1_voltage) / 4095.0);
+		iio_channel_attr_read(chn3, "raw", chn3_voltage, 50);
+		printf("Yneg = %s = %lfV = %lfg  ", chn0_voltage, (atoi(chn3_voltage) * 2.5) / 4095, atoi(chn3_voltage) / 4095.0);
+		iio_channel_attr_read(chn5, "raw", chn5_voltage, 50);
+		printf("Zneg = %s = %lfV = %lfg\n\n\n", chn0_voltage, (atoi(chn5_voltage) * 2.5) / 4095, atoi(chn5_voltage) / 4095.0);
+	}
+	
 	
 
 	iio_context_destroy(ctx);
