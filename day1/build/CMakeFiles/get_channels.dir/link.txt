@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/get_channels.dir/get_channels.c.o -o get_channels  -liio 

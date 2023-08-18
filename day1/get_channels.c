@@ -1,7 +1,9 @@
 // READ ALL CHANELS
 #include <stdio.h>
 #include <iio.h>
-#include <unistd.h>#define URI "ip:10.76.84.128"int main() {
+#include <unistd.h>
+#define URI "ip:10.76.84.128"
+int main() {
 unsigned int major;
 unsigned int minor;
 char git_tag[8];

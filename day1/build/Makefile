@@ -130,6 +130,58 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named get_channels
+
+# Build rule for target.
+get_channels: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 get_channels
+.PHONY : get_channels
+
+# fast build rule for target.
+get_channels/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_channels.dir/build.make CMakeFiles/get_channels.dir/build
+.PHONY : get_channels/fast
+
+#=============================================================================
+# Target rules for targets named read_adxl
+
+# Build rule for target.
+read_adxl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_adxl
+.PHONY : read_adxl
+
+# fast build rule for target.
+read_adxl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adxl.dir/build.make CMakeFiles/read_adxl.dir/build
+.PHONY : read_adxl/fast
+
+#=============================================================================
+# Target rules for targets named read_temp
+
+# Build rule for target.
+read_temp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_temp
+.PHONY : read_temp
+
+# fast build rule for target.
+read_temp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/build
+.PHONY : read_temp/fast
+
+#=============================================================================
+# Target rules for targets named task1
+
+# Build rule for target.
+task1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1
+.PHONY : task1
+
+# fast build rule for target.
+task1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/build
+.PHONY : task1/fast
+
+#=============================================================================
 # Target rules for targets named ctx_attr
 
 # Build rule for target.
@@ -195,6 +247,33 @@ ctx_attr.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ctx_attr.dir/build.make CMakeFiles/ctx_attr.dir/ctx_attr.c.s
 .PHONY : ctx_attr.c.s
 
+get_channels.o: get_channels.c.o
+
+.PHONY : get_channels.o
+
+# target to build an object file
+get_channels.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_channels.dir/build.make CMakeFiles/get_channels.dir/get_channels.c.o
+.PHONY : get_channels.c.o
+
+get_channels.i: get_channels.c.i
+
+.PHONY : get_channels.i
+
+# target to preprocess a source file
+get_channels.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_channels.dir/build.make CMakeFiles/get_channels.dir/get_channels.c.i
+.PHONY : get_channels.c.i
+
+get_channels.s: get_channels.c.s
+
+.PHONY : get_channels.s
+
+# target to generate assembly for a file
+get_channels.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_channels.dir/build.make CMakeFiles/get_channels.dir/get_channels.c.s
+.PHONY : get_channels.c.s
+
 hello.o: hello.c.o
 
 .PHONY : hello.o
@@ -249,6 +328,87 @@ hello_iio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.s
 .PHONY : hello_iio.c.s
 
+read_adxl.o: read_adxl.c.o
+
+.PHONY : read_adxl.o
+
+# target to build an object file
+read_adxl.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adxl.dir/build.make CMakeFiles/read_adxl.dir/read_adxl.c.o
+.PHONY : read_adxl.c.o
+
+read_adxl.i: read_adxl.c.i
+
+.PHONY : read_adxl.i
+
+# target to preprocess a source file
+read_adxl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adxl.dir/build.make CMakeFiles/read_adxl.dir/read_adxl.c.i
+.PHONY : read_adxl.c.i
+
+read_adxl.s: read_adxl.c.s
+
+.PHONY : read_adxl.s
+
+# target to generate assembly for a file
+read_adxl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adxl.dir/build.make CMakeFiles/read_adxl.dir/read_adxl.c.s
+.PHONY : read_adxl.c.s
+
+read_temp.o: read_temp.c.o
+
+.PHONY : read_temp.o
+
+# target to build an object file
+read_temp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/read_temp.c.o
+.PHONY : read_temp.c.o
+
+read_temp.i: read_temp.c.i
+
+.PHONY : read_temp.i
+
+# target to preprocess a source file
+read_temp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/read_temp.c.i
+.PHONY : read_temp.c.i
+
+read_temp.s: read_temp.c.s
+
+.PHONY : read_temp.s
+
+# target to generate assembly for a file
+read_temp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/read_temp.c.s
+.PHONY : read_temp.c.s
+
+task1.o: task1.c.o
+
+.PHONY : task1.o
+
+# target to build an object file
+task1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/task1.c.o
+.PHONY : task1.c.o
+
+task1.i: task1.c.i
+
+.PHONY : task1.i
+
+# target to preprocess a source file
+task1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/task1.c.i
+.PHONY : task1.c.i
+
+task1.s: task1.c.s
+
+.PHONY : task1.s
+
+# target to generate assembly for a file
+task1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/task1.c.s
+.PHONY : task1.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,17 +418,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ctx_attr"
+	@echo "... get_channels"
 	@echo "... hello"
 	@echo "... hello_iio"
+	@echo "... read_adxl"
+	@echo "... read_temp"
+	@echo "... task1"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
+	@echo "... get_channels.o"
+	@echo "... get_channels.i"
+	@echo "... get_channels.s"
 	@echo "... hello.o"
 	@echo "... hello.i"
 	@echo "... hello.s"
 	@echo "... hello_iio.o"
 	@echo "... hello_iio.i"
 	@echo "... hello_iio.s"
+	@echo "... read_adxl.o"
+	@echo "... read_adxl.i"
+	@echo "... read_adxl.s"
+	@echo "... read_temp.o"
+	@echo "... read_temp.i"
+	@echo "... read_temp.s"
+	@echo "... task1.o"
+	@echo "... task1.i"
+	@echo "... task1.s"
 .PHONY : help
 
 

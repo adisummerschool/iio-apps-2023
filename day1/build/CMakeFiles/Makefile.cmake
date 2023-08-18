@@ -45,6 +45,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/get_channels.dir/DependInfo.cmake"
+  "CMakeFiles/read_adxl.dir/DependInfo.cmake"
+  "CMakeFiles/read_temp.dir/DependInfo.cmake"
+  "CMakeFiles/task1.dir/DependInfo.cmake"
   "CMakeFiles/ctx_attr.dir/DependInfo.cmake"
   "CMakeFiles/hello_iio.dir/DependInfo.cmake"
   "CMakeFiles/hello.dir/DependInfo.cmake"
