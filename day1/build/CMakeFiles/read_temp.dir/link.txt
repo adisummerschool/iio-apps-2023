@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read_temp.dir/read_temp.c.o -o read_temp  -liio 
