@@ -1,0 +1,6 @@
+/home/analog/Desktop/iio-apps-2023/day1/build/CMakeFiles/rebuild_cache.dir
+/home/analog/Desktop/iio-apps-2023/day1/build/CMakeFiles/edit_cache.dir
+/home/analog/Desktop/iio-apps-2023/day1/build/CMakeFiles/part3.dir
+/home/analog/Desktop/iio-apps-2023/day1/build/CMakeFiles/part2.dir
+/home/analog/Desktop/iio-apps-2023/day1/build/CMakeFiles/part4.dir
+/home/analog/Desktop/iio-apps-2023/day1/build/CMakeFiles/part1.dir
