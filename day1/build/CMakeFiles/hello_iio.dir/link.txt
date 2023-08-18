@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/hello_iio.dir/hello_iio.c.o -o hello_iio  -liio 
