@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/task4.dir/task4.c.o -o task4  -liio 

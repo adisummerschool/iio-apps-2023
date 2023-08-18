@@ -156,6 +156,19 @@ ctx_attr/fast:
 .PHONY : ctx_attr/fast
 
 #=============================================================================
+# Target rules for targets named task4
+
+# Build rule for target.
+task4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task4
+.PHONY : task4
+
+# fast build rule for target.
+task4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task4.dir/build.make CMakeFiles/task4.dir/build
+.PHONY : task4/fast
+
+#=============================================================================
 # Target rules for targets named task2
 
 # Build rule for target.
@@ -329,6 +342,33 @@ task3.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/task3.c.s
 .PHONY : task3.c.s
 
+task4.o: task4.c.o
+
+.PHONY : task4.o
+
+# target to build an object file
+task4.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task4.dir/build.make CMakeFiles/task4.dir/task4.c.o
+.PHONY : task4.c.o
+
+task4.i: task4.c.i
+
+.PHONY : task4.i
+
+# target to preprocess a source file
+task4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task4.dir/build.make CMakeFiles/task4.dir/task4.c.i
+.PHONY : task4.c.i
+
+task4.s: task4.c.s
+
+.PHONY : task4.s
+
+# target to generate assembly for a file
+task4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task4.dir/build.make CMakeFiles/task4.dir/task4.c.s
+.PHONY : task4.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -342,6 +382,7 @@ help:
 	@echo "... hello_iio"
 	@echo "... task2"
 	@echo "... task3"
+	@echo "... task4"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
@@ -357,6 +398,9 @@ help:
 	@echo "... task3.o"
 	@echo "... task3.i"
 	@echo "... task3.s"
+	@echo "... task4.o"
+	@echo "... task4.i"
+	@echo "... task4.s"
 .PHONY : help
 
 
