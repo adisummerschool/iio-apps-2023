@@ -1,0 +1,3 @@
+/home/analog/Desktop/iio-apps-2023/day2/calib_accel/build/CMakeFiles/rebuild_cache.dir
+/home/analog/Desktop/iio-apps-2023/day2/calib_accel/build/CMakeFiles/edit_cache.dir
+/home/analog/Desktop/iio-apps-2023/day2/calib_accel/build/CMakeFiles/calib_accel.dir

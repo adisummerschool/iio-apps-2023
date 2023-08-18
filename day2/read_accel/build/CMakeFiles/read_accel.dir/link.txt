@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read_accel.dir/read_accel.c.o -o read_accel  -liio 

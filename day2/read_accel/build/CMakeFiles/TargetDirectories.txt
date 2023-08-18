@@ -1,0 +1,3 @@
+/home/analog/Desktop/iio-apps-2023/day2/read_accel/build/CMakeFiles/edit_cache.dir
+/home/analog/Desktop/iio-apps-2023/day2/read_accel/build/CMakeFiles/rebuild_cache.dir
+/home/analog/Desktop/iio-apps-2023/day2/read_accel/build/CMakeFiles/read_accel.dir
