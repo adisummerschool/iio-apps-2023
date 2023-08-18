@@ -1,8 +1,15 @@
 project(iio_apps)
 
-add_executable(hello hello.c)
-add_executable(hello_iio hello_iio.c)
+#add_executable(hello hello.c)
+#add_executable(hello_iio hello_iio.c)
 #add_executable(ctx_attr ctx_attr.c)
+add_executable(part1 part1.c)
+add_executable(part2_3 part2_3.c)
+add_executable(part4 part4.c)
 
-target_link_libraries(hello_iio iio)
+#target_link_libraries(hello iio)
+#target_link_libraries(hello_iio iio)
 #target_link_libraries(ctx_attr iio)
+target_link_libraries(part1 iio)
+target_link_libraries(part2_3 iio)
+target_link_libraries(part4 iio)
