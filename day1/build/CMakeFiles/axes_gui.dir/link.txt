@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/axes_gui.dir/axes_gui.c.o -o axes_gui  -liio -lncurses 

@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/calib_cipi.dir/calib_cipi.c.o -o calib_cipi  -liio 

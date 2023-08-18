@@ -130,6 +130,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named read_adc_cont
+
+# Build rule for target.
+read_adc_cont: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_adc_cont
+.PHONY : read_adc_cont
+
+# fast build rule for target.
+read_adc_cont/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc_cont.dir/build.make CMakeFiles/read_adc_cont.dir/build
+.PHONY : read_adc_cont/fast
+
+#=============================================================================
+# Target rules for targets named axes_gui
+
+# Build rule for target.
+axes_gui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 axes_gui
+.PHONY : axes_gui
+
+# fast build rule for target.
+axes_gui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/axes_gui.dir/build.make CMakeFiles/axes_gui.dir/build
+.PHONY : axes_gui/fast
+
+#=============================================================================
+# Target rules for targets named shock_detection
+
+# Build rule for target.
+shock_detection: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shock_detection
+.PHONY : shock_detection
+
+# fast build rule for target.
+shock_detection/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detection.dir/build.make CMakeFiles/shock_detection.dir/build
+.PHONY : shock_detection/fast
+
+#=============================================================================
 # Target rules for targets named read_all_channels
 
 # Build rule for target.
@@ -169,6 +208,19 @@ ctx_attr/fast:
 .PHONY : ctx_attr/fast
 
 #=============================================================================
+# Target rules for targets named calib_cipi
+
+# Build rule for target.
+calib_cipi: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calib_cipi
+.PHONY : calib_cipi
+
+# fast build rule for target.
+calib_cipi/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_cipi.dir/build.make CMakeFiles/calib_cipi.dir/build
+.PHONY : calib_cipi/fast
+
+#=============================================================================
 # Target rules for targets named hello_iio
 
 # Build rule for target.
@@ -182,6 +234,19 @@ hello_iio/fast:
 .PHONY : hello_iio/fast
 
 #=============================================================================
+# Target rules for targets named read_adc
+
+# Build rule for target.
+read_adc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_adc
+.PHONY : read_adc
+
+# fast build rule for target.
+read_adc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/build
+.PHONY : read_adc/fast
+
+#=============================================================================
 # Target rules for targets named hello
 
 # Build rule for target.
@@ -193,6 +258,60 @@ hello: cmake_check_build_system
 hello/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
+
+axes_gui.o: axes_gui.c.o
+
+.PHONY : axes_gui.o
+
+# target to build an object file
+axes_gui.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/axes_gui.dir/build.make CMakeFiles/axes_gui.dir/axes_gui.c.o
+.PHONY : axes_gui.c.o
+
+axes_gui.i: axes_gui.c.i
+
+.PHONY : axes_gui.i
+
+# target to preprocess a source file
+axes_gui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/axes_gui.dir/build.make CMakeFiles/axes_gui.dir/axes_gui.c.i
+.PHONY : axes_gui.c.i
+
+axes_gui.s: axes_gui.c.s
+
+.PHONY : axes_gui.s
+
+# target to generate assembly for a file
+axes_gui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/axes_gui.dir/build.make CMakeFiles/axes_gui.dir/axes_gui.c.s
+.PHONY : axes_gui.c.s
+
+calib_cipi.o: calib_cipi.c.o
+
+.PHONY : calib_cipi.o
+
+# target to build an object file
+calib_cipi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_cipi.dir/build.make CMakeFiles/calib_cipi.dir/calib_cipi.c.o
+.PHONY : calib_cipi.c.o
+
+calib_cipi.i: calib_cipi.c.i
+
+.PHONY : calib_cipi.i
+
+# target to preprocess a source file
+calib_cipi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_cipi.dir/build.make CMakeFiles/calib_cipi.dir/calib_cipi.c.i
+.PHONY : calib_cipi.c.i
+
+calib_cipi.s: calib_cipi.c.s
+
+.PHONY : calib_cipi.s
+
+# target to generate assembly for a file
+calib_cipi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_cipi.dir/build.make CMakeFiles/calib_cipi.dir/calib_cipi.c.s
+.PHONY : calib_cipi.c.s
 
 ctx_attr.o: ctx_attr.c.o
 
@@ -275,6 +394,60 @@ hello_iio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.s
 .PHONY : hello_iio.c.s
 
+read_adc.o: read_adc.c.o
+
+.PHONY : read_adc.o
+
+# target to build an object file
+read_adc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/read_adc.c.o
+.PHONY : read_adc.c.o
+
+read_adc.i: read_adc.c.i
+
+.PHONY : read_adc.i
+
+# target to preprocess a source file
+read_adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/read_adc.c.i
+.PHONY : read_adc.c.i
+
+read_adc.s: read_adc.c.s
+
+.PHONY : read_adc.s
+
+# target to generate assembly for a file
+read_adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/read_adc.c.s
+.PHONY : read_adc.c.s
+
+read_adc_cont.o: read_adc_cont.c.o
+
+.PHONY : read_adc_cont.o
+
+# target to build an object file
+read_adc_cont.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc_cont.dir/build.make CMakeFiles/read_adc_cont.dir/read_adc_cont.c.o
+.PHONY : read_adc_cont.c.o
+
+read_adc_cont.i: read_adc_cont.c.i
+
+.PHONY : read_adc_cont.i
+
+# target to preprocess a source file
+read_adc_cont.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc_cont.dir/build.make CMakeFiles/read_adc_cont.dir/read_adc_cont.c.i
+.PHONY : read_adc_cont.c.i
+
+read_adc_cont.s: read_adc_cont.c.s
+
+.PHONY : read_adc_cont.s
+
+# target to generate assembly for a file
+read_adc_cont.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc_cont.dir/build.make CMakeFiles/read_adc_cont.dir/read_adc_cont.c.s
+.PHONY : read_adc_cont.c.s
+
 read_all_channels.o: read_all_channels.c.o
 
 .PHONY : read_all_channels.o
@@ -329,6 +502,33 @@ readtemp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/readtemp.dir/build.make CMakeFiles/readtemp.dir/readtemp.c.s
 .PHONY : readtemp.c.s
 
+shock_detection.o: shock_detection.c.o
+
+.PHONY : shock_detection.o
+
+# target to build an object file
+shock_detection.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detection.dir/build.make CMakeFiles/shock_detection.dir/shock_detection.c.o
+.PHONY : shock_detection.c.o
+
+shock_detection.i: shock_detection.c.i
+
+.PHONY : shock_detection.i
+
+# target to preprocess a source file
+shock_detection.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detection.dir/build.make CMakeFiles/shock_detection.dir/shock_detection.c.i
+.PHONY : shock_detection.c.i
+
+shock_detection.s: shock_detection.c.s
+
+.PHONY : shock_detection.s
+
+# target to generate assembly for a file
+shock_detection.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detection.dir/build.make CMakeFiles/shock_detection.dir/shock_detection.c.s
+.PHONY : shock_detection.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -337,11 +537,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... axes_gui"
+	@echo "... calib_cipi"
 	@echo "... ctx_attr"
 	@echo "... hello"
 	@echo "... hello_iio"
+	@echo "... read_adc"
+	@echo "... read_adc_cont"
 	@echo "... read_all_channels"
 	@echo "... readtemp"
+	@echo "... shock_detection"
+	@echo "... axes_gui.o"
+	@echo "... axes_gui.i"
+	@echo "... axes_gui.s"
+	@echo "... calib_cipi.o"
+	@echo "... calib_cipi.i"
+	@echo "... calib_cipi.s"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
@@ -351,12 +562,21 @@ help:
 	@echo "... hello_iio.o"
 	@echo "... hello_iio.i"
 	@echo "... hello_iio.s"
+	@echo "... read_adc.o"
+	@echo "... read_adc.i"
+	@echo "... read_adc.s"
+	@echo "... read_adc_cont.o"
+	@echo "... read_adc_cont.i"
+	@echo "... read_adc_cont.s"
 	@echo "... read_all_channels.o"
 	@echo "... read_all_channels.i"
 	@echo "... read_all_channels.s"
 	@echo "... readtemp.o"
 	@echo "... readtemp.i"
 	@echo "... readtemp.s"
+	@echo "... shock_detection.o"
+	@echo "... shock_detection.i"
+	@echo "... shock_detection.s"
 .PHONY : help
 
 

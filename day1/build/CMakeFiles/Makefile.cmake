@@ -45,9 +45,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/read_adc_cont.dir/DependInfo.cmake"
+  "CMakeFiles/axes_gui.dir/DependInfo.cmake"
+  "CMakeFiles/shock_detection.dir/DependInfo.cmake"
   "CMakeFiles/read_all_channels.dir/DependInfo.cmake"
   "CMakeFiles/readtemp.dir/DependInfo.cmake"
   "CMakeFiles/ctx_attr.dir/DependInfo.cmake"
+  "CMakeFiles/calib_cipi.dir/DependInfo.cmake"
   "CMakeFiles/hello_iio.dir/DependInfo.cmake"
+  "CMakeFiles/read_adc.dir/DependInfo.cmake"
   "CMakeFiles/hello.dir/DependInfo.cmake"
   )
