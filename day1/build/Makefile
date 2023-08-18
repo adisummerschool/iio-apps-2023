@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named task3
+
+# Build rule for target.
+task3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task3
+.PHONY : task3
+
+# fast build rule for target.
+task3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/build
+.PHONY : task3/fast
+
+#=============================================================================
 # Target rules for targets named ctx_attr
 
 # Build rule for target.
@@ -289,6 +302,33 @@ task2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/task2.c.s
 .PHONY : task2.c.s
 
+task3.o: task3.c.o
+
+.PHONY : task3.o
+
+# target to build an object file
+task3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/task3.c.o
+.PHONY : task3.c.o
+
+task3.i: task3.c.i
+
+.PHONY : task3.i
+
+# target to preprocess a source file
+task3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/task3.c.i
+.PHONY : task3.c.i
+
+task3.s: task3.c.s
+
+.PHONY : task3.s
+
+# target to generate assembly for a file
+task3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/task3.c.s
+.PHONY : task3.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -301,6 +341,7 @@ help:
 	@echo "... hello"
 	@echo "... hello_iio"
 	@echo "... task2"
+	@echo "... task3"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
@@ -313,6 +354,9 @@ help:
 	@echo "... task2.o"
 	@echo "... task2.i"
 	@echo "... task2.s"
+	@echo "... task3.o"
+	@echo "... task3.i"
+	@echo "... task3.s"
 .PHONY : help
 
 
