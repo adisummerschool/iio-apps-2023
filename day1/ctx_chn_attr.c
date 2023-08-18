@@ -10,11 +10,6 @@ int main() {
 	unsigned int major;
 	unsigned int minor;
 	char git_tag[8];
-	const char *description;
-	const char *ctx_name;
-	const char *ctx_val;
-	const char *dev_name;
-	const char *dev_val;
 	struct iio_context *ctx;
 	struct iio_device *dev;
 	struct iio_channel *chn;
@@ -30,18 +25,6 @@ int main() {
 		printf("Cannot connect to the board.\n");
 		return 1;
 	}
-
-	description = iio_context_get_description(ctx);
-	printf("Description: %s\n" , description);
-
-	int attr_count = iio_context_get_attrs_count(ctx);
-	for (int i = 0; i < attr_count; i++)
-	{
-		iio_context_get_attr(ctx,i,&ctx_name,&ctx_val); 
-		printf("ctx attr %d: %s - %s\n" ,i, ctx_name, ctx_val);
-	}
-	
-	printf("\n");
 	
 	dev = iio_context_find_device(ctx, "ad5592r_s");
 	chn = iio_device_get_channel(dev, 0);
@@ -75,28 +58,4 @@ int main() {
 		sleep(1);
 	}
 
-	printf("\n");
-
-	// (raw + offset) * scale;
-	bool ret_val;
-	dev = iio_context_find_device(ctx, "xadc");
-	chn = iio_device_find_channel(dev, "temp0", ret_val);
-
-	char raw[50];
-	char offset[50];
-	char scale[50];
-	iio_channel_attr_read(chn, "raw", raw, 50);
-	iio_channel_attr_read(chn, "scale", scale, 50);
-	iio_channel_attr_read(chn, "offset", offset, 50);
-
-	int raw_int = atoi(raw);
-	int offset_int = atoi(offset);
-	int scale_int = atoi(scale);
-
-	printf("Temparature = %d\n", (raw_int + offset_int) * scale_int / 1000);
-
-	iio_context_destroy(ctx);
-	free(raw_data_pointer);
-
-	return 0;
 }
