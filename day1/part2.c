@@ -61,45 +61,5 @@ int main() {
 	iio_channel_attr_read(chn, attr_name, raw_data_pointer, 50);
 	printf("\n%s Chan0_value = %s\n\n",attr_name, raw_data_pointer);
 
-	int random_value;
-	char random_value_array[10];
-	for (int i = 0; i < 5; i++)
-	{
-		random_value = rand() % 200;
-		sprintf(random_value_array,"%ld", random_value);
-		printf("Setting chan0 value to %d\n", random_value);
-
-		iio_channel_attr_write(chn, attr_name, random_value_array);
-
-		iio_channel_attr_read(chn, attr_name, raw_data_pointer, 50);
-		printf("%s Chan0_value = %s\n",attr_name, raw_data_pointer);
-		sleep(1);
-	}
-
-	printf("\n");
-
-	// (raw + offset) * scale;
-	bool ret_val;
-	dev = iio_context_find_device(ctx, "xadc");
-	chn = iio_device_find_channel(dev, "temp0", ret_val);
-
-
-
-	char raw[50];
-	char offset[50];
-	char scale[50];
-	iio_channel_attr_read(chn, "raw", raw, 50);
-	iio_channel_attr_read(chn, "scale", scale, 50);
-	iio_channel_attr_read(chn, "offset", offset, 50);
-
-	int raw_int = atoi(raw);
-	int offset_int = atoi(offset);
-	int scale_int = atoi(scale);
-
-	printf("Temperature = %d\n", (raw_int + offset_int) * scale_int / 1000);
-
-	iio_context_destroy(ctx);
-	free(raw_data_pointer);
-
-	return 0;
+    return 0;
 }
