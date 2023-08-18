@@ -77,6 +77,7 @@ all: CMakeFiles/ctx_attr.dir/all
 all: CMakeFiles/task4.dir/all
 all: CMakeFiles/task2.dir/all
 all: CMakeFiles/hello_iio.dir/all
+all: CMakeFiles/read_adc.dir/all
 all: CMakeFiles/hello.dir/all
 
 .PHONY : all
@@ -92,6 +93,7 @@ clean: CMakeFiles/ctx_attr.dir/clean
 clean: CMakeFiles/task4.dir/clean
 clean: CMakeFiles/task2.dir/clean
 clean: CMakeFiles/hello_iio.dir/clean
+clean: CMakeFiles/read_adc.dir/clean
 clean: CMakeFiles/hello.dir/clean
 
 .PHONY : clean
@@ -103,7 +105,7 @@ clean: CMakeFiles/hello.dir/clean
 CMakeFiles/task3.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=9,10 "Built target task3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=11,12 "Built target task3"
 .PHONY : CMakeFiles/task3.dir/all
 
 # Build rule for subdir invocation for target.
@@ -157,7 +159,7 @@ CMakeFiles/ctx_attr.dir/clean:
 CMakeFiles/task4.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task4.dir/build.make CMakeFiles/task4.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task4.dir/build.make CMakeFiles/task4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=11,12 "Built target task4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=13,14 "Built target task4"
 .PHONY : CMakeFiles/task4.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,7 +186,7 @@ CMakeFiles/task4.dir/clean:
 CMakeFiles/task2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=7,8 "Built target task2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=9,10 "Built target task2"
 .PHONY : CMakeFiles/task2.dir/all
 
 # Build rule for subdir invocation for target.
@@ -230,6 +232,33 @@ hello_iio: CMakeFiles/hello_iio.dir/rule
 CMakeFiles/hello_iio.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/clean
 .PHONY : CMakeFiles/hello_iio.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/read_adc.dir
+
+# All Build rule for target.
+CMakeFiles/read_adc.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=7,8 "Built target read_adc"
+.PHONY : CMakeFiles/read_adc.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/read_adc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/read_adc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles 0
+.PHONY : CMakeFiles/read_adc.dir/rule
+
+# Convenience name for target.
+read_adc: CMakeFiles/read_adc.dir/rule
+
+.PHONY : read_adc
+
+# clean rule for target.
+CMakeFiles/read_adc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/clean
+.PHONY : CMakeFiles/read_adc.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/hello.dir

@@ -1,7 +1,7 @@
-// READ ALL CHANELS
 #include <stdio.h>
 #include <iio.h>
 #include <unistd.h>
+
 #define URI "ip:10.76.84.156"
 
 int main() {
@@ -20,7 +20,7 @@ if (ctx == NULL)
 int dev_count = iio_context_get_devices_count(ctx);
 for (int i = 0; i < dev_count; i++)
 {
-        struct iio_device *dev = iio_context_get_device(ctx, i); 
+        struct iio_device *dev = iio_context_get_device(ctx, i);
         printf("Device %d: %s\n", i, iio_device_get_name(dev));
         int ch_count = iio_device_get_channels_count(dev);
         for (int j = 0; j < ch_count; j++)

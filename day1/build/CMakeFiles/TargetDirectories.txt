@@ -5,4 +5,5 @@
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/task4.dir
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/task2.dir
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/hello_iio.dir
+/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/read_adc.dir
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/hello.dir

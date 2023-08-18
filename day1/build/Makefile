@@ -195,6 +195,19 @@ hello_iio/fast:
 .PHONY : hello_iio/fast
 
 #=============================================================================
+# Target rules for targets named read_adc
+
+# Build rule for target.
+read_adc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_adc
+.PHONY : read_adc
+
+# fast build rule for target.
+read_adc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/build
+.PHONY : read_adc/fast
+
+#=============================================================================
 # Target rules for targets named hello
 
 # Build rule for target.
@@ -288,6 +301,33 @@ hello_iio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.s
 .PHONY : hello_iio.c.s
 
+read_adc.o: read_adc.c.o
+
+.PHONY : read_adc.o
+
+# target to build an object file
+read_adc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/read_adc.c.o
+.PHONY : read_adc.c.o
+
+read_adc.i: read_adc.c.i
+
+.PHONY : read_adc.i
+
+# target to preprocess a source file
+read_adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/read_adc.c.i
+.PHONY : read_adc.c.i
+
+read_adc.s: read_adc.c.s
+
+.PHONY : read_adc.s
+
+# target to generate assembly for a file
+read_adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/read_adc.c.s
+.PHONY : read_adc.c.s
+
 task2.o: task2.c.o
 
 .PHONY : task2.o
@@ -380,6 +420,7 @@ help:
 	@echo "... ctx_attr"
 	@echo "... hello"
 	@echo "... hello_iio"
+	@echo "... read_adc"
 	@echo "... task2"
 	@echo "... task3"
 	@echo "... task4"
@@ -392,6 +433,9 @@ help:
 	@echo "... hello_iio.o"
 	@echo "... hello_iio.i"
 	@echo "... hello_iio.s"
+	@echo "... read_adc.o"
+	@echo "... read_adc.i"
+	@echo "... read_adc.s"
 	@echo "... task2.o"
 	@echo "... task2.i"
 	@echo "... task2.s"
