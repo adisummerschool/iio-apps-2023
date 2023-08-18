@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read_all_chanels.dir/read_all_chanels.c.o -o read_all_chanels  -liio 

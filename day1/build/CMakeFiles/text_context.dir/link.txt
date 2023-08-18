@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/text_context.dir/text_context.c.o -o text_context  -liio 
