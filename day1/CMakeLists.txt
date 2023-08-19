@@ -6,3 +6,6 @@ add_executable(ctx_attr ctx_attr.c)
 
 target_link_libraries(hello_iio iio)
 target_link_libraries(ctx_attr iio)
+
+add_executable(read_XADC read_XADC.c)
+target_link_libraries(read_XADC iio)

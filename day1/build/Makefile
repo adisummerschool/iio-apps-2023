@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named read_XADC
+
+# Build rule for target.
+read_XADC: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_XADC
+.PHONY : read_XADC
+
+# fast build rule for target.
+read_XADC/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_XADC.dir/build.make CMakeFiles/read_XADC.dir/build
+.PHONY : read_XADC/fast
+
+#=============================================================================
 # Target rules for targets named ctx_attr
 
 # Build rule for target.
@@ -249,6 +262,33 @@ hello_iio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.s
 .PHONY : hello_iio.c.s
 
+read_XADC.o: read_XADC.c.o
+
+.PHONY : read_XADC.o
+
+# target to build an object file
+read_XADC.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_XADC.dir/build.make CMakeFiles/read_XADC.dir/read_XADC.c.o
+.PHONY : read_XADC.c.o
+
+read_XADC.i: read_XADC.c.i
+
+.PHONY : read_XADC.i
+
+# target to preprocess a source file
+read_XADC.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_XADC.dir/build.make CMakeFiles/read_XADC.dir/read_XADC.c.i
+.PHONY : read_XADC.c.i
+
+read_XADC.s: read_XADC.c.s
+
+.PHONY : read_XADC.s
+
+# target to generate assembly for a file
+read_XADC.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_XADC.dir/build.make CMakeFiles/read_XADC.dir/read_XADC.c.s
+.PHONY : read_XADC.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -260,6 +300,7 @@ help:
 	@echo "... ctx_attr"
 	@echo "... hello"
 	@echo "... hello_iio"
+	@echo "... read_XADC"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
@@ -269,6 +310,9 @@ help:
 	@echo "... hello_iio.o"
 	@echo "... hello_iio.i"
 	@echo "... hello_iio.s"
+	@echo "... read_XADC.o"
+	@echo "... read_XADC.i"
+	@echo "... read_XADC.s"
 .PHONY : help
 
 

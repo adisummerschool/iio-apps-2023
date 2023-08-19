@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read_XADC.dir/read_XADC.c.o -o read_XADC  -liio 
