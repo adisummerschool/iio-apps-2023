@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/dev-chan_attr.dir/dev-chan_attr.c.o -o dev-chan_attr  -liio 

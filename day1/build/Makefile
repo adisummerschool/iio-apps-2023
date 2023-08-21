@@ -130,6 +130,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named calib_accel
+
+# Build rule for target.
+calib_accel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calib_accel
+.PHONY : calib_accel
+
+# fast build rule for target.
+calib_accel/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_accel.dir/build.make CMakeFiles/calib_accel.dir/build
+.PHONY : calib_accel/fast
+
+#=============================================================================
+# Target rules for targets named read_accel
+
+# Build rule for target.
+read_accel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_accel
+.PHONY : read_accel
+
+# fast build rule for target.
+read_accel/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_accel.dir/build.make CMakeFiles/read_accel.dir/build
+.PHONY : read_accel/fast
+
+#=============================================================================
+# Target rules for targets named shock_detect
+
+# Build rule for target.
+shock_detect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shock_detect
+.PHONY : shock_detect
+
+# fast build rule for target.
+shock_detect/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/build
+.PHONY : shock_detect/fast
+
+#=============================================================================
+# Target rules for targets named read_val
+
+# Build rule for target.
+read_val: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_val
+.PHONY : read_val
+
+# fast build rule for target.
+read_val/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_val.dir/build.make CMakeFiles/read_val.dir/build
+.PHONY : read_val/fast
+
+#=============================================================================
+# Target rules for targets named dev-chan_attr
+
+# Build rule for target.
+dev-chan_attr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dev-chan_attr
+.PHONY : dev-chan_attr
+
+# fast build rule for target.
+dev-chan_attr/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dev-chan_attr.dir/build.make CMakeFiles/dev-chan_attr.dir/build
+.PHONY : dev-chan_attr/fast
+
+#=============================================================================
 # Target rules for targets named read_temp
 
 # Build rule for target.
@@ -181,6 +246,33 @@ hello/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
+calib_accel.o: calib_accel.c.o
+
+.PHONY : calib_accel.o
+
+# target to build an object file
+calib_accel.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_accel.dir/build.make CMakeFiles/calib_accel.dir/calib_accel.c.o
+.PHONY : calib_accel.c.o
+
+calib_accel.i: calib_accel.c.i
+
+.PHONY : calib_accel.i
+
+# target to preprocess a source file
+calib_accel.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_accel.dir/build.make CMakeFiles/calib_accel.dir/calib_accel.c.i
+.PHONY : calib_accel.c.i
+
+calib_accel.s: calib_accel.c.s
+
+.PHONY : calib_accel.s
+
+# target to generate assembly for a file
+calib_accel.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_accel.dir/build.make CMakeFiles/calib_accel.dir/calib_accel.c.s
+.PHONY : calib_accel.c.s
+
 ctx_attr.o: ctx_attr.c.o
 
 .PHONY : ctx_attr.o
@@ -207,6 +299,33 @@ ctx_attr.s: ctx_attr.c.s
 ctx_attr.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ctx_attr.dir/build.make CMakeFiles/ctx_attr.dir/ctx_attr.c.s
 .PHONY : ctx_attr.c.s
+
+dev-chan_attr.o: dev-chan_attr.c.o
+
+.PHONY : dev-chan_attr.o
+
+# target to build an object file
+dev-chan_attr.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dev-chan_attr.dir/build.make CMakeFiles/dev-chan_attr.dir/dev-chan_attr.c.o
+.PHONY : dev-chan_attr.c.o
+
+dev-chan_attr.i: dev-chan_attr.c.i
+
+.PHONY : dev-chan_attr.i
+
+# target to preprocess a source file
+dev-chan_attr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dev-chan_attr.dir/build.make CMakeFiles/dev-chan_attr.dir/dev-chan_attr.c.i
+.PHONY : dev-chan_attr.c.i
+
+dev-chan_attr.s: dev-chan_attr.c.s
+
+.PHONY : dev-chan_attr.s
+
+# target to generate assembly for a file
+dev-chan_attr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dev-chan_attr.dir/build.make CMakeFiles/dev-chan_attr.dir/dev-chan_attr.c.s
+.PHONY : dev-chan_attr.c.s
 
 hello.o: hello.c.o
 
@@ -262,6 +381,33 @@ hello_iio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.s
 .PHONY : hello_iio.c.s
 
+read_accel.o: read_accel.c.o
+
+.PHONY : read_accel.o
+
+# target to build an object file
+read_accel.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_accel.dir/build.make CMakeFiles/read_accel.dir/read_accel.c.o
+.PHONY : read_accel.c.o
+
+read_accel.i: read_accel.c.i
+
+.PHONY : read_accel.i
+
+# target to preprocess a source file
+read_accel.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_accel.dir/build.make CMakeFiles/read_accel.dir/read_accel.c.i
+.PHONY : read_accel.c.i
+
+read_accel.s: read_accel.c.s
+
+.PHONY : read_accel.s
+
+# target to generate assembly for a file
+read_accel.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_accel.dir/build.make CMakeFiles/read_accel.dir/read_accel.c.s
+.PHONY : read_accel.c.s
+
 read_temp.o: read_temp.c.o
 
 .PHONY : read_temp.o
@@ -289,6 +435,60 @@ read_temp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/read_temp.c.s
 .PHONY : read_temp.c.s
 
+read_val.o: read_val.c.o
+
+.PHONY : read_val.o
+
+# target to build an object file
+read_val.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_val.dir/build.make CMakeFiles/read_val.dir/read_val.c.o
+.PHONY : read_val.c.o
+
+read_val.i: read_val.c.i
+
+.PHONY : read_val.i
+
+# target to preprocess a source file
+read_val.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_val.dir/build.make CMakeFiles/read_val.dir/read_val.c.i
+.PHONY : read_val.c.i
+
+read_val.s: read_val.c.s
+
+.PHONY : read_val.s
+
+# target to generate assembly for a file
+read_val.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_val.dir/build.make CMakeFiles/read_val.dir/read_val.c.s
+.PHONY : read_val.c.s
+
+shock_detect.o: shock_detect.c.o
+
+.PHONY : shock_detect.o
+
+# target to build an object file
+shock_detect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.o
+.PHONY : shock_detect.c.o
+
+shock_detect.i: shock_detect.c.i
+
+.PHONY : shock_detect.i
+
+# target to preprocess a source file
+shock_detect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.i
+.PHONY : shock_detect.c.i
+
+shock_detect.s: shock_detect.c.s
+
+.PHONY : shock_detect.s
+
+# target to generate assembly for a file
+shock_detect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.s
+.PHONY : shock_detect.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -297,22 +497,42 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... calib_accel"
 	@echo "... ctx_attr"
+	@echo "... dev-chan_attr"
 	@echo "... hello"
 	@echo "... hello_iio"
+	@echo "... read_accel"
 	@echo "... read_temp"
+	@echo "... read_val"
+	@echo "... shock_detect"
+	@echo "... calib_accel.o"
+	@echo "... calib_accel.i"
+	@echo "... calib_accel.s"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
+	@echo "... dev-chan_attr.o"
+	@echo "... dev-chan_attr.i"
+	@echo "... dev-chan_attr.s"
 	@echo "... hello.o"
 	@echo "... hello.i"
 	@echo "... hello.s"
 	@echo "... hello_iio.o"
 	@echo "... hello_iio.i"
 	@echo "... hello_iio.s"
+	@echo "... read_accel.o"
+	@echo "... read_accel.i"
+	@echo "... read_accel.s"
 	@echo "... read_temp.o"
 	@echo "... read_temp.i"
 	@echo "... read_temp.s"
+	@echo "... read_val.o"
+	@echo "... read_val.i"
+	@echo "... read_val.s"
+	@echo "... shock_detect.o"
+	@echo "... shock_detect.i"
+	@echo "... shock_detect.s"
 .PHONY : help
 
 
