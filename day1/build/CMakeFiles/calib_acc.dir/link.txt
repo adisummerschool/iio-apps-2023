@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/calib_acc.dir/calib_acc.c.o -o calib_acc  -liio 

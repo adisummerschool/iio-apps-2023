@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read_acc.dir/read_acc.c.o -o read_acc  -liio 

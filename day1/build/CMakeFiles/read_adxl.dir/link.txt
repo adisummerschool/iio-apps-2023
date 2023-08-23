@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read_adxl.dir/read_adxl.c.o -o read_adxl  -liio 

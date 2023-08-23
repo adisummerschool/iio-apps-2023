@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/shock.dir/shock_det.c.o -o shock  -liio 
