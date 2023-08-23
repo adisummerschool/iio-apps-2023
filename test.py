@@ -1,5 +1,6 @@
 import iio
 import matplotlib.pyplot as plt
+import numpy as np
 
 ctxname="ip:10.76.84.128"
 
@@ -9,13 +10,17 @@ dev = ctx.find_device("ad5592r_s")
 channels = []
 for i in range(6):
     channels.append(dev.find_channel("voltage"+str(i)))
-
+    
+plt.ion()
 
 for ch in channels:
-    print(ch.attrs["raw"].value)
+    ch.enabled = True
     
+nr_samples = 32
+buf = iio.Buffer(dev,nr_samples,False)
+time = range(nr_samples)
 
-plt.ion()
+
 while True:
     buf.refill()
     data = buf.read()
@@ -39,5 +44,5 @@ while True:
     plt.plot(z,'b')
     plt.axis([0, 32, -10000 ,10000])
     plt.draw()
-    plt.pause(0.05)
+exit    plt.pause(0.05)
     plt.clf()
