@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/challenge.dir/challenge.c.o -o challenge  -liio 

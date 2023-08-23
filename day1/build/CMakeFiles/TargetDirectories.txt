@@ -1,5 +1,10 @@
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/acc.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/rebuild_cache.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/shock_detect.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/read_acc.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/calib_acc.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/read_temp.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/challenge.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/read_all_chanels.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/edit_cache.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/text_context.dir

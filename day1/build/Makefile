@@ -130,6 +130,58 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named acc
+
+# Build rule for target.
+acc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acc
+.PHONY : acc
+
+# fast build rule for target.
+acc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc.dir/build.make CMakeFiles/acc.dir/build
+.PHONY : acc/fast
+
+#=============================================================================
+# Target rules for targets named shock_detect
+
+# Build rule for target.
+shock_detect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shock_detect
+.PHONY : shock_detect
+
+# fast build rule for target.
+shock_detect/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/build
+.PHONY : shock_detect/fast
+
+#=============================================================================
+# Target rules for targets named read_acc
+
+# Build rule for target.
+read_acc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_acc
+.PHONY : read_acc
+
+# fast build rule for target.
+read_acc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_acc.dir/build.make CMakeFiles/read_acc.dir/build
+.PHONY : read_acc/fast
+
+#=============================================================================
+# Target rules for targets named calib_acc
+
+# Build rule for target.
+calib_acc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calib_acc
+.PHONY : calib_acc
+
+# fast build rule for target.
+calib_acc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_acc.dir/build.make CMakeFiles/calib_acc.dir/build
+.PHONY : calib_acc/fast
+
+#=============================================================================
 # Target rules for targets named read_temp
 
 # Build rule for target.
@@ -141,6 +193,19 @@ read_temp: cmake_check_build_system
 read_temp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/build
 .PHONY : read_temp/fast
+
+#=============================================================================
+# Target rules for targets named challenge
+
+# Build rule for target.
+challenge: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 challenge
+.PHONY : challenge
+
+# fast build rule for target.
+challenge/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/challenge.dir/build.make CMakeFiles/challenge.dir/build
+.PHONY : challenge/fast
 
 #=============================================================================
 # Target rules for targets named read_all_chanels
@@ -193,6 +258,87 @@ hello_iio_1: cmake_check_build_system
 hello_iio_1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio_1.dir/build.make CMakeFiles/hello_iio_1.dir/build
 .PHONY : hello_iio_1/fast
+
+acc.o: acc.c.o
+
+.PHONY : acc.o
+
+# target to build an object file
+acc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc.dir/build.make CMakeFiles/acc.dir/acc.c.o
+.PHONY : acc.c.o
+
+acc.i: acc.c.i
+
+.PHONY : acc.i
+
+# target to preprocess a source file
+acc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc.dir/build.make CMakeFiles/acc.dir/acc.c.i
+.PHONY : acc.c.i
+
+acc.s: acc.c.s
+
+.PHONY : acc.s
+
+# target to generate assembly for a file
+acc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc.dir/build.make CMakeFiles/acc.dir/acc.c.s
+.PHONY : acc.c.s
+
+calib_acc.o: calib_acc.c.o
+
+.PHONY : calib_acc.o
+
+# target to build an object file
+calib_acc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_acc.dir/build.make CMakeFiles/calib_acc.dir/calib_acc.c.o
+.PHONY : calib_acc.c.o
+
+calib_acc.i: calib_acc.c.i
+
+.PHONY : calib_acc.i
+
+# target to preprocess a source file
+calib_acc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_acc.dir/build.make CMakeFiles/calib_acc.dir/calib_acc.c.i
+.PHONY : calib_acc.c.i
+
+calib_acc.s: calib_acc.c.s
+
+.PHONY : calib_acc.s
+
+# target to generate assembly for a file
+calib_acc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_acc.dir/build.make CMakeFiles/calib_acc.dir/calib_acc.c.s
+.PHONY : calib_acc.c.s
+
+challenge.o: challenge.c.o
+
+.PHONY : challenge.o
+
+# target to build an object file
+challenge.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/challenge.dir/build.make CMakeFiles/challenge.dir/challenge.c.o
+.PHONY : challenge.c.o
+
+challenge.i: challenge.c.i
+
+.PHONY : challenge.i
+
+# target to preprocess a source file
+challenge.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/challenge.dir/build.make CMakeFiles/challenge.dir/challenge.c.i
+.PHONY : challenge.c.i
+
+challenge.s: challenge.c.s
+
+.PHONY : challenge.s
+
+# target to generate assembly for a file
+challenge.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/challenge.dir/build.make CMakeFiles/challenge.dir/challenge.c.s
+.PHONY : challenge.c.s
 
 ctx_attr.o: ctx_attr.c.o
 
@@ -248,6 +394,33 @@ hello_iio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio_1.dir/build.make CMakeFiles/hello_iio_1.dir/hello_iio.c.s
 .PHONY : hello_iio.c.s
 
+read_acc.o: read_acc.c.o
+
+.PHONY : read_acc.o
+
+# target to build an object file
+read_acc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_acc.dir/build.make CMakeFiles/read_acc.dir/read_acc.c.o
+.PHONY : read_acc.c.o
+
+read_acc.i: read_acc.c.i
+
+.PHONY : read_acc.i
+
+# target to preprocess a source file
+read_acc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_acc.dir/build.make CMakeFiles/read_acc.dir/read_acc.c.i
+.PHONY : read_acc.c.i
+
+read_acc.s: read_acc.c.s
+
+.PHONY : read_acc.s
+
+# target to generate assembly for a file
+read_acc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_acc.dir/build.make CMakeFiles/read_acc.dir/read_acc.c.s
+.PHONY : read_acc.c.s
+
 read_all_chanels.o: read_all_chanels.c.o
 
 .PHONY : read_all_chanels.o
@@ -302,6 +475,33 @@ read_temp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/read_temp.c.s
 .PHONY : read_temp.c.s
 
+shock_detect.o: shock_detect.c.o
+
+.PHONY : shock_detect.o
+
+# target to build an object file
+shock_detect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.o
+.PHONY : shock_detect.c.o
+
+shock_detect.i: shock_detect.c.i
+
+.PHONY : shock_detect.i
+
+# target to preprocess a source file
+shock_detect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.i
+.PHONY : shock_detect.c.i
+
+shock_detect.s: shock_detect.c.s
+
+.PHONY : shock_detect.s
+
+# target to generate assembly for a file
+shock_detect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.s
+.PHONY : shock_detect.c.s
+
 text_context.o: text_context.c.o
 
 .PHONY : text_context.o
@@ -337,23 +537,43 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... acc"
+	@echo "... calib_acc"
+	@echo "... challenge"
 	@echo "... ctx_attr"
 	@echo "... hello_iio_1"
+	@echo "... read_acc"
 	@echo "... read_all_chanels"
 	@echo "... read_temp"
+	@echo "... shock_detect"
 	@echo "... text_context"
+	@echo "... acc.o"
+	@echo "... acc.i"
+	@echo "... acc.s"
+	@echo "... calib_acc.o"
+	@echo "... calib_acc.i"
+	@echo "... calib_acc.s"
+	@echo "... challenge.o"
+	@echo "... challenge.i"
+	@echo "... challenge.s"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
 	@echo "... hello_iio.o"
 	@echo "... hello_iio.i"
 	@echo "... hello_iio.s"
+	@echo "... read_acc.o"
+	@echo "... read_acc.i"
+	@echo "... read_acc.s"
 	@echo "... read_all_chanels.o"
 	@echo "... read_all_chanels.i"
 	@echo "... read_all_chanels.s"
 	@echo "... read_temp.o"
 	@echo "... read_temp.i"
 	@echo "... read_temp.s"
+	@echo "... shock_detect.o"
+	@echo "... shock_detect.i"
+	@echo "... shock_detect.s"
 	@echo "... text_context.o"
 	@echo "... text_context.i"
 	@echo "... text_context.s"

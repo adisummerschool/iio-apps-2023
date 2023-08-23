@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iio.h>
 #define URI "ip:10.76.84.128"
+
 int main() {
 unsigned int major;
 unsigned int minor;
@@ -9,6 +10,7 @@ const char *description;
 const char *ctx_name;
 const char *ctx_val;
 struct iio_context *ctx;
+
 iio_library_get_version(&major, &minor, git_tag);
 printf("libiio version: %d.%d - %s \n", major, minor, git_tag);
 ctx = iio_create_context_from_uri(URI); // Message when context is not available and quit

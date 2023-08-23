@@ -45,7 +45,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/acc.dir/DependInfo.cmake"
+  "CMakeFiles/shock_detect.dir/DependInfo.cmake"
+  "CMakeFiles/read_acc.dir/DependInfo.cmake"
+  "CMakeFiles/calib_acc.dir/DependInfo.cmake"
   "CMakeFiles/read_temp.dir/DependInfo.cmake"
+  "CMakeFiles/challenge.dir/DependInfo.cmake"
   "CMakeFiles/read_all_chanels.dir/DependInfo.cmake"
   "CMakeFiles/text_context.dir/DependInfo.cmake"
   "CMakeFiles/ctx_attr.dir/DependInfo.cmake"
