@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /home/analog/iio-apps-2023/day1/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -128,6 +128,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named shock_detect
+
+# Build rule for target.
+shock_detect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shock_detect
+.PHONY : shock_detect
+
+# fast build rule for target.
+shock_detect/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/build
+.PHONY : shock_detect/fast
+
+#=============================================================================
+# Target rules for targets named adxl_calib
+
+# Build rule for target.
+adxl_calib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 adxl_calib
+.PHONY : adxl_calib
+
+# fast build rule for target.
+adxl_calib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/adxl_calib.dir/build.make CMakeFiles/adxl_calib.dir/build
+.PHONY : adxl_calib/fast
 
 #=============================================================================
 # Target rules for targets named get_channels
@@ -167,6 +193,19 @@ read_temp: cmake_check_build_system
 read_temp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/build
 .PHONY : read_temp/fast
+
+#=============================================================================
+# Target rules for targets named read_bucla
+
+# Build rule for target.
+read_bucla: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_bucla
+.PHONY : read_bucla
+
+# fast build rule for target.
+read_bucla/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_bucla.dir/build.make CMakeFiles/read_bucla.dir/build
+.PHONY : read_bucla/fast
 
 #=============================================================================
 # Target rules for targets named task1
@@ -219,6 +258,33 @@ hello: cmake_check_build_system
 hello/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
+
+adxl_calib.o: adxl_calib.c.o
+
+.PHONY : adxl_calib.o
+
+# target to build an object file
+adxl_calib.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/adxl_calib.dir/build.make CMakeFiles/adxl_calib.dir/adxl_calib.c.o
+.PHONY : adxl_calib.c.o
+
+adxl_calib.i: adxl_calib.c.i
+
+.PHONY : adxl_calib.i
+
+# target to preprocess a source file
+adxl_calib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/adxl_calib.dir/build.make CMakeFiles/adxl_calib.dir/adxl_calib.c.i
+.PHONY : adxl_calib.c.i
+
+adxl_calib.s: adxl_calib.c.s
+
+.PHONY : adxl_calib.s
+
+# target to generate assembly for a file
+adxl_calib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/adxl_calib.dir/build.make CMakeFiles/adxl_calib.dir/adxl_calib.c.s
+.PHONY : adxl_calib.c.s
 
 ctx_attr.o: ctx_attr.c.o
 
@@ -355,6 +421,33 @@ read_adxl.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adxl.dir/build.make CMakeFiles/read_adxl.dir/read_adxl.c.s
 .PHONY : read_adxl.c.s
 
+read_bucla.o: read_bucla.c.o
+
+.PHONY : read_bucla.o
+
+# target to build an object file
+read_bucla.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_bucla.dir/build.make CMakeFiles/read_bucla.dir/read_bucla.c.o
+.PHONY : read_bucla.c.o
+
+read_bucla.i: read_bucla.c.i
+
+.PHONY : read_bucla.i
+
+# target to preprocess a source file
+read_bucla.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_bucla.dir/build.make CMakeFiles/read_bucla.dir/read_bucla.c.i
+.PHONY : read_bucla.c.i
+
+read_bucla.s: read_bucla.c.s
+
+.PHONY : read_bucla.s
+
+# target to generate assembly for a file
+read_bucla.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_bucla.dir/build.make CMakeFiles/read_bucla.dir/read_bucla.c.s
+.PHONY : read_bucla.c.s
+
 read_temp.o: read_temp.c.o
 
 .PHONY : read_temp.o
@@ -381,6 +474,33 @@ read_temp.s: read_temp.c.s
 read_temp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/read_temp.c.s
 .PHONY : read_temp.c.s
+
+shock_detect.o: shock_detect.c.o
+
+.PHONY : shock_detect.o
+
+# target to build an object file
+shock_detect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.o
+.PHONY : shock_detect.c.o
+
+shock_detect.i: shock_detect.c.i
+
+.PHONY : shock_detect.i
+
+# target to preprocess a source file
+shock_detect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.i
+.PHONY : shock_detect.c.i
+
+shock_detect.s: shock_detect.c.s
+
+.PHONY : shock_detect.s
+
+# target to generate assembly for a file
+shock_detect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.s
+.PHONY : shock_detect.c.s
 
 task1.o: task1.c.o
 
@@ -417,13 +537,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... adxl_calib"
 	@echo "... ctx_attr"
 	@echo "... get_channels"
 	@echo "... hello"
 	@echo "... hello_iio"
 	@echo "... read_adxl"
+	@echo "... read_bucla"
 	@echo "... read_temp"
+	@echo "... shock_detect"
 	@echo "... task1"
+	@echo "... adxl_calib.o"
+	@echo "... adxl_calib.i"
+	@echo "... adxl_calib.s"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
@@ -439,9 +565,15 @@ help:
 	@echo "... read_adxl.o"
 	@echo "... read_adxl.i"
 	@echo "... read_adxl.s"
+	@echo "... read_bucla.o"
+	@echo "... read_bucla.i"
+	@echo "... read_bucla.s"
 	@echo "... read_temp.o"
 	@echo "... read_temp.i"
 	@echo "... read_temp.s"
+	@echo "... shock_detect.o"
+	@echo "... shock_detect.i"
+	@echo "... shock_detect.s"
 	@echo "... task1.o"
 	@echo "... task1.i"
 	@echo "... task1.s"

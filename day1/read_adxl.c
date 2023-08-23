@@ -2,7 +2,7 @@
 #include <iio.h>
 #include <unistd.h>
 
-#define URI "ip:10.76.84.156"
+#define URI "ip:10.76.84.128"
 
 int main()
 {

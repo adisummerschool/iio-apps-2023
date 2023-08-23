@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/adxl_calib.dir/adxl_calib.c.o -o adxl_calib  -liio 

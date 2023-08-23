@@ -1,8 +1,11 @@
-/home/analog/iio-apps-2023/day1/build/CMakeFiles/rebuild_cache.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/edit_cache.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/rebuild_cache.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/shock_detect.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/adxl_calib.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/get_channels.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/read_adxl.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/read_temp.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/read_bucla.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/task1.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/ctx_attr.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/hello_iio.dir

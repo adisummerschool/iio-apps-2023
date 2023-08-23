@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read_bucla.dir/read_bucla.c.o -o read_bucla  -liio 

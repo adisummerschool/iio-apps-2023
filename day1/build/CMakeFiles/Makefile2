@@ -72,9 +72,12 @@ CMAKE_BINARY_DIR = /home/analog/iio-apps-2023/day1/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/shock_detect.dir/all
+all: CMakeFiles/adxl_calib.dir/all
 all: CMakeFiles/get_channels.dir/all
 all: CMakeFiles/read_adxl.dir/all
 all: CMakeFiles/read_temp.dir/all
+all: CMakeFiles/read_bucla.dir/all
 all: CMakeFiles/task1.dir/all
 all: CMakeFiles/ctx_attr.dir/all
 all: CMakeFiles/hello_iio.dir/all
@@ -88,9 +91,12 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/shock_detect.dir/clean
+clean: CMakeFiles/adxl_calib.dir/clean
 clean: CMakeFiles/get_channels.dir/clean
 clean: CMakeFiles/read_adxl.dir/clean
 clean: CMakeFiles/read_temp.dir/clean
+clean: CMakeFiles/read_bucla.dir/clean
 clean: CMakeFiles/task1.dir/clean
 clean: CMakeFiles/ctx_attr.dir/clean
 clean: CMakeFiles/hello_iio.dir/clean
@@ -99,13 +105,67 @@ clean: CMakeFiles/hello.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/shock_detect.dir
+
+# All Build rule for target.
+CMakeFiles/shock_detect.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=17,18 "Built target shock_detect"
+.PHONY : CMakeFiles/shock_detect.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/shock_detect.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/iio-apps-2023/day1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/shock_detect.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/iio-apps-2023/day1/build/CMakeFiles 0
+.PHONY : CMakeFiles/shock_detect.dir/rule
+
+# Convenience name for target.
+shock_detect: CMakeFiles/shock_detect.dir/rule
+
+.PHONY : shock_detect
+
+# clean rule for target.
+CMakeFiles/shock_detect.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/clean
+.PHONY : CMakeFiles/shock_detect.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/adxl_calib.dir
+
+# All Build rule for target.
+CMakeFiles/adxl_calib.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/adxl_calib.dir/build.make CMakeFiles/adxl_calib.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/adxl_calib.dir/build.make CMakeFiles/adxl_calib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=1,2 "Built target adxl_calib"
+.PHONY : CMakeFiles/adxl_calib.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/adxl_calib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/iio-apps-2023/day1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/adxl_calib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/iio-apps-2023/day1/build/CMakeFiles 0
+.PHONY : CMakeFiles/adxl_calib.dir/rule
+
+# Convenience name for target.
+adxl_calib: CMakeFiles/adxl_calib.dir/rule
+
+.PHONY : adxl_calib
+
+# clean rule for target.
+CMakeFiles/adxl_calib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/adxl_calib.dir/build.make CMakeFiles/adxl_calib.dir/clean
+.PHONY : CMakeFiles/adxl_calib.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/get_channels.dir
 
 # All Build rule for target.
 CMakeFiles/get_channels.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_channels.dir/build.make CMakeFiles/get_channels.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_channels.dir/build.make CMakeFiles/get_channels.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=3,4 "Built target get_channels"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=5,6 "Built target get_channels"
 .PHONY : CMakeFiles/get_channels.dir/all
 
 # Build rule for subdir invocation for target.
@@ -132,7 +192,7 @@ CMakeFiles/get_channels.dir/clean:
 CMakeFiles/read_adxl.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adxl.dir/build.make CMakeFiles/read_adxl.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adxl.dir/build.make CMakeFiles/read_adxl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=9,10 "Built target read_adxl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=11,12 "Built target read_adxl"
 .PHONY : CMakeFiles/read_adxl.dir/all
 
 # Build rule for subdir invocation for target.
@@ -159,7 +219,7 @@ CMakeFiles/read_adxl.dir/clean:
 CMakeFiles/read_temp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_temp.dir/build.make CMakeFiles/read_temp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=11,12 "Built target read_temp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=15,16 "Built target read_temp"
 .PHONY : CMakeFiles/read_temp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -180,13 +240,40 @@ CMakeFiles/read_temp.dir/clean:
 .PHONY : CMakeFiles/read_temp.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/read_bucla.dir
+
+# All Build rule for target.
+CMakeFiles/read_bucla.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_bucla.dir/build.make CMakeFiles/read_bucla.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_bucla.dir/build.make CMakeFiles/read_bucla.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=13,14 "Built target read_bucla"
+.PHONY : CMakeFiles/read_bucla.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/read_bucla.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/iio-apps-2023/day1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/read_bucla.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/iio-apps-2023/day1/build/CMakeFiles 0
+.PHONY : CMakeFiles/read_bucla.dir/rule
+
+# Convenience name for target.
+read_bucla: CMakeFiles/read_bucla.dir/rule
+
+.PHONY : read_bucla
+
+# clean rule for target.
+CMakeFiles/read_bucla.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_bucla.dir/build.make CMakeFiles/read_bucla.dir/clean
+.PHONY : CMakeFiles/read_bucla.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/task1.dir
 
 # All Build rule for target.
 CMakeFiles/task1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=13,14 "Built target task1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=19,20 "Built target task1"
 .PHONY : CMakeFiles/task1.dir/all
 
 # Build rule for subdir invocation for target.
@@ -213,7 +300,7 @@ CMakeFiles/task1.dir/clean:
 CMakeFiles/ctx_attr.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ctx_attr.dir/build.make CMakeFiles/ctx_attr.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ctx_attr.dir/build.make CMakeFiles/ctx_attr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=1,2 "Built target ctx_attr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=3,4 "Built target ctx_attr"
 .PHONY : CMakeFiles/ctx_attr.dir/all
 
 # Build rule for subdir invocation for target.
@@ -240,7 +327,7 @@ CMakeFiles/ctx_attr.dir/clean:
 CMakeFiles/hello_iio.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=7,8 "Built target hello_iio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=9,10 "Built target hello_iio"
 .PHONY : CMakeFiles/hello_iio.dir/all
 
 # Build rule for subdir invocation for target.
@@ -267,7 +354,7 @@ CMakeFiles/hello_iio.dir/clean:
 CMakeFiles/hello.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=5,6 "Built target hello"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/iio-apps-2023/day1/build/CMakeFiles --progress-num=7,8 "Built target hello"
 .PHONY : CMakeFiles/hello.dir/all
 
 # Build rule for subdir invocation for target.
