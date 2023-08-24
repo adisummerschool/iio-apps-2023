@@ -1,0 +1,3 @@
+/home/kali/Documents/Practica/iio-apps-2023/day3/build/CMakeFiles/shock_buffer.dir
+/home/kali/Documents/Practica/iio-apps-2023/day3/build/CMakeFiles/edit_cache.dir
+/home/kali/Documents/Practica/iio-apps-2023/day3/build/CMakeFiles/rebuild_cache.dir
