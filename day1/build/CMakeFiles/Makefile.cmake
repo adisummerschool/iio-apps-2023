@@ -48,6 +48,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/read_adc_cont.dir/DependInfo.cmake"
   "CMakeFiles/axes_gui.dir/DependInfo.cmake"
   "CMakeFiles/shock_detection.dir/DependInfo.cmake"
+  "CMakeFiles/shock_buffer.dir/DependInfo.cmake"
   "CMakeFiles/read_all_channels.dir/DependInfo.cmake"
   "CMakeFiles/readtemp.dir/DependInfo.cmake"
   "CMakeFiles/ctx_attr.dir/DependInfo.cmake"

@@ -113,7 +113,7 @@ int main() {
             }
 
             display_axes_gui(accelerations);
-            usleep(5000000); // Wait for 100 milliseconds before updating again
+            usleep(100000); // Wait for 100 milliseconds before updating again
         }
 
     } else {

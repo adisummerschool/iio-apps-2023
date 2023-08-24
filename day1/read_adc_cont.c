@@ -6,11 +6,7 @@
 //#define URI "ip:10.76.84.208"
 
 void clearConsole() {
-#ifdef _WIN32
-    system("cls");
-#else
     system("clear");
-#endif
 }
 
 int main() {
@@ -31,7 +27,7 @@ int main() {
     int dev_count = iio_context_get_devices_count(ctx);
 
     if (dev_count > 0) {
-        struct iio_device *dev = iio_context_get_device(ctx, 0);
+        struct iio_device *dev = iio_context_get_device(ctx, 1);
 
         const char* axis_names[] = {
             "xpoz",
@@ -60,7 +56,7 @@ int main() {
                 printf("%s %d %.4lf %.4lf\n", axis_names[i], raw, volts, acceleration);
             }
 
-            usleep(3500000); 
+            usleep(100000); 
         }
     } else {
         fprintf(stderr, "No devices found.\n");

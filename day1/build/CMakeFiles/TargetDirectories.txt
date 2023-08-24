@@ -2,6 +2,7 @@
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/read_adc_cont.dir
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/axes_gui.dir
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/shock_detection.dir
+/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/shock_buffer.dir
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/read_all_channels.dir
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/edit_cache.dir
 /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles/readtemp.dir

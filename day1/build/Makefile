@@ -169,6 +169,19 @@ shock_detection/fast:
 .PHONY : shock_detection/fast
 
 #=============================================================================
+# Target rules for targets named shock_buffer
+
+# Build rule for target.
+shock_buffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shock_buffer
+.PHONY : shock_buffer
+
+# fast build rule for target.
+shock_buffer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/build
+.PHONY : shock_buffer/fast
+
+#=============================================================================
 # Target rules for targets named read_all_channels
 
 # Build rule for target.
@@ -502,6 +515,33 @@ readtemp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/readtemp.dir/build.make CMakeFiles/readtemp.dir/readtemp.c.s
 .PHONY : readtemp.c.s
 
+shock_buffer.o: shock_buffer.c.o
+
+.PHONY : shock_buffer.o
+
+# target to build an object file
+shock_buffer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/shock_buffer.c.o
+.PHONY : shock_buffer.c.o
+
+shock_buffer.i: shock_buffer.c.i
+
+.PHONY : shock_buffer.i
+
+# target to preprocess a source file
+shock_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/shock_buffer.c.i
+.PHONY : shock_buffer.c.i
+
+shock_buffer.s: shock_buffer.c.s
+
+.PHONY : shock_buffer.s
+
+# target to generate assembly for a file
+shock_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/shock_buffer.c.s
+.PHONY : shock_buffer.c.s
+
 shock_detection.o: shock_detection.c.o
 
 .PHONY : shock_detection.o
@@ -546,6 +586,7 @@ help:
 	@echo "... read_adc_cont"
 	@echo "... read_all_channels"
 	@echo "... readtemp"
+	@echo "... shock_buffer"
 	@echo "... shock_detection"
 	@echo "... axes_gui.o"
 	@echo "... axes_gui.i"
@@ -574,6 +615,9 @@ help:
 	@echo "... readtemp.o"
 	@echo "... readtemp.i"
 	@echo "... readtemp.s"
+	@echo "... shock_buffer.o"
+	@echo "... shock_buffer.i"
+	@echo "... shock_buffer.s"
 	@echo "... shock_detection.o"
 	@echo "... shock_detection.i"
 	@echo "... shock_detection.s"

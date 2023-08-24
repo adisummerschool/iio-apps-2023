@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/analog/Documents/iio-apps-2023/day1/shock_detection.c
+/home/analog/Documents/iio-apps-2023/day1/shock_buffer.c
 stdio.h
 -
 iio.h
 -
-unistd.h
--
-time.h
+string.h
 -
 

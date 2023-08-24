@@ -75,6 +75,7 @@ CMAKE_BINARY_DIR = /home/analog/Documents/iio-apps-2023/day1/build
 all: CMakeFiles/read_adc_cont.dir/all
 all: CMakeFiles/axes_gui.dir/all
 all: CMakeFiles/shock_detection.dir/all
+all: CMakeFiles/shock_buffer.dir/all
 all: CMakeFiles/read_all_channels.dir/all
 all: CMakeFiles/readtemp.dir/all
 all: CMakeFiles/ctx_attr.dir/all
@@ -94,6 +95,7 @@ preinstall:
 clean: CMakeFiles/read_adc_cont.dir/clean
 clean: CMakeFiles/axes_gui.dir/clean
 clean: CMakeFiles/shock_detection.dir/clean
+clean: CMakeFiles/shock_buffer.dir/clean
 clean: CMakeFiles/read_all_channels.dir/clean
 clean: CMakeFiles/readtemp.dir/clean
 clean: CMakeFiles/ctx_attr.dir/clean
@@ -165,7 +167,7 @@ CMakeFiles/axes_gui.dir/clean:
 CMakeFiles/shock_detection.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detection.dir/build.make CMakeFiles/shock_detection.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detection.dir/build.make CMakeFiles/shock_detection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=19,20 "Built target shock_detection"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=21,22 "Built target shock_detection"
 .PHONY : CMakeFiles/shock_detection.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,6 +186,33 @@ shock_detection: CMakeFiles/shock_detection.dir/rule
 CMakeFiles/shock_detection.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detection.dir/build.make CMakeFiles/shock_detection.dir/clean
 .PHONY : CMakeFiles/shock_detection.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/shock_buffer.dir
+
+# All Build rule for target.
+CMakeFiles/shock_buffer.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles --progress-num=19,20 "Built target shock_buffer"
+.PHONY : CMakeFiles/shock_buffer.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/shock_buffer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/shock_buffer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/analog/Documents/iio-apps-2023/day1/build/CMakeFiles 0
+.PHONY : CMakeFiles/shock_buffer.dir/rule
+
+# Convenience name for target.
+shock_buffer: CMakeFiles/shock_buffer.dir/rule
+
+.PHONY : shock_buffer
+
+# clean rule for target.
+CMakeFiles/shock_buffer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/clean
+.PHONY : CMakeFiles/shock_buffer.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/read_all_channels.dir

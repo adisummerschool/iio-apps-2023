@@ -10,6 +10,7 @@ add_executable(read_adc read_adc.c)
 add_executable(axes_gui axes_gui.c)
 add_executable(read_adc_cont read_adc_cont.c)
 add_executable(calib_cipi calib_cipi.c)
+add_executable(shock_buffer shock_buffer.c)
 
 
 target_link_libraries(hello_iio iio)
@@ -22,3 +23,4 @@ target_link_libraries(axes_gui iio)
 target_link_libraries(axes_gui ncurses)
 target_link_libraries(read_adc_cont iio)
 target_link_libraries(calib_cipi iio)
+target_link_libraries(shock_buffer iio)
