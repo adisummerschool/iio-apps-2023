@@ -12,7 +12,7 @@
 #include <iio.h>
 #include <unistd.h>
 
-const char* URI =  "ip:10.76.84.201";
+const char* URI =  "ip:10.76.84.210";
 const char* DEVICE_NAME = "ad5592r_s";
 
 const double VOLTS_PER_LSB = 2.5 / (4096);

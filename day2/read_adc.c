@@ -2,11 +2,19 @@
 #include <iio.h>
 #include <unistd.h>
 
-const char* URI =  "ip:10.76.84.201";
+const char* URI =  "ip:10.76.84.210";
 const char* DEVICE_NAME = "ad5592r_s";
 
 const double VOLTS_PER_LSB = 2.5 / (4096);
 const int MAX_RAW_VAL = 4095;
+
+void clearConsole() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
 
 
 void print_chn_info (struct iio_channel* chn, const char* chn_name);
@@ -53,12 +61,20 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    print_chn_info(xpos, "xpos");
-    print_chn_info(xneg, "xneg");
-    print_chn_info(ypos, "ypos");
-    print_chn_info(yneg, "yneg");
-    print_chn_info(zpos, "zpos");
-    print_chn_info(zneg, "zneg");
+    while (1) {
+        clearConsole();
+
+        print_chn_info(xpos, "xpos");
+        print_chn_info(xneg, "xneg");
+        print_chn_info(ypos, "ypos");
+        print_chn_info(yneg, "yneg");
+        print_chn_info(zpos, "zpos");
+        print_chn_info(zneg, "zneg");
+
+        usleep(500000); 
+    }
+
+    
 
 	iio_context_destroy(ctx);
 	return 0;

@@ -3,26 +3,38 @@
 #include <stdio.h>
 #include <iio.h>
 #include <unistd.h>
+#include <math.h>
 
-const char* URI =  "ip:10.76.84.209";
+const char* URI =  "ip:10.76.84.210";
 const char* DEVICE_NAME = "ad5592r_s";
 
 const double VOLTS_PER_LSB = 2.5 / (4096);
 const int MAX_RAW_VAL = 4095;
 
+const float THRESHOLD = 0.5;
 
-double get_accel(struct iio_channel* ch_pos, struct iio_channel* ch_neg)
+void clearConsole() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
+
+
+float get_accel(struct iio_channel* ch_pos, struct iio_channel* ch_neg)
 {
-    char buff[50];
+    char buff_pos[50];
+    char buff_neg[50];
     const char* attr = "raw";
 
-    double accel_pos = 0;
-    double accel_neg = 0;
+    float accel_pos = 0;
+    float accel_neg = 0;
 
-    iio_channel_attr_read(ch_pos, attr, buff, 50);
-    accel_pos = atoi(buff) / MAX_RAW_VAL;
-    iio_channel_attr_read(ch_neg, attr, buff, 50);
-    accel_neg = atoi(buff) / MAX_RAW_VAL;
+    iio_channel_attr_read(ch_pos, attr, buff_pos, 50);
+    accel_pos = atof(buff_pos) / MAX_RAW_VAL;
+    iio_channel_attr_read(ch_neg, attr, buff_neg, 50);
+    accel_neg = atof(buff_neg) / MAX_RAW_VAL;
 
     return accel_pos - accel_neg;
 }
@@ -72,15 +84,39 @@ int main(int argc, char* argv[]) {
 
     printf("Start acceleration readings");
 
+
+    float x_crnt = get_accel(xpos, xneg), 
+           x_prev = 0,
+           deltaX;
+    float y_crnt = get_accel(ypos, yneg),
+           y_prev = 0, 
+           deltaY;
+    float z_crnt = get_accel(zpos, zneg), 
+           z_prev = 0,
+           deltaZ;
     
     while(1)
     {
-        double accel_x = get_accel(xpos, xneg);
-        double accel_y = get_accel(ypos, yneg);
-        double accel_z = get_accel(zpos, zneg);
+        x_prev = x_crnt;
+        y_prev = y_crnt;
+        z_prev = z_crnt;
 
-        printf("X: %lf  Y: %lf Z: %lf", accel_x, accel_y, accel_z);
-		sleep(1); // in seconds
+        x_crnt = get_accel(xpos, xneg);
+        y_crnt = get_accel(ypos, yneg);
+        z_crnt = get_accel(zpos, zneg);
+
+        deltaX = fabs(x_crnt - x_prev);
+        deltaY = fabs(y_crnt - y_prev);
+        deltaZ = fabs(z_crnt - z_prev);
+
+        // clearConsole();
+        printf("deltaX = %f \t deltaY = %f \t deltaZ = %f \n", deltaX, deltaY, deltaZ);
+
+        if( deltaX >= THRESHOLD || deltaY >= THRESHOLD || deltaZ >= THRESHOLD)
+        {
+            printf("Shock detected!\n");
+        }
+		usleep(500000); 
     }
 
 	iio_context_destroy(ctx);
