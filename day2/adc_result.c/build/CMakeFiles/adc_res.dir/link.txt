@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/adc_res.dir/adc_result.c.o -o adc_res  -liio 

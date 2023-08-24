@@ -1,0 +1,5 @@
+/home/daniel/adi/iio-apps-2023/day2/adc_result.c/build/CMakeFiles/adc_res.dir
+/home/daniel/adi/iio-apps-2023/day2/adc_result.c/build/CMakeFiles/shock.dir
+/home/daniel/adi/iio-apps-2023/day2/adc_result.c/build/CMakeFiles/buf.dir
+/home/daniel/adi/iio-apps-2023/day2/adc_result.c/build/CMakeFiles/edit_cache.dir
+/home/daniel/adi/iio-apps-2023/day2/adc_result.c/build/CMakeFiles/rebuild_cache.dir
