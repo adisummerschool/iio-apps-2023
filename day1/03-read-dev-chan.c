@@ -9,42 +9,21 @@ const char* DEVICE_NAME = "ad5592r_s";
 
 
 int main() {
-
-	unsigned int major;
-	unsigned int minor;
-	char git_tag[8];
-	const char *description;
-	const char *ctx_name;
-	const char *ctx_val;
 	struct iio_context *ctx;
-
-	iio_library_get_version(&major, &minor, git_tag);
-
-	printf("libiio version: %d.%d - %s \n", major,minor,git_tag);
+    const char *ctx_name;
+	const char *ctx_val;
 
 	ctx = iio_create_context_from_uri(URI);
 
-	// 1. Handle when context is not available
 	if(!ctx) {
-		printf("[ERROR] : Can't create context with provided URI");
+		printf("[ERROR] : Can't create context with provided URI: %s", URI);
 		return 1;
 	}
 
-	description = iio_context_get_description(ctx);
-	printf("Description: %s\n" , description);
+    printf("Print all device/channel attributes: \n");
 
-	int attrs_count = iio_context_get_attrs_count(ctx);
-	printf("IIO context has %d attributes:\n", attrs_count);
-
-	// 2. Read al context attributes
-	for (int i=0; i < attrs_count; i++) {
-		iio_context_get_attr(ctx,i,&ctx_name,&ctx_val); 
-		printf("\tctx attr %d: %s - %s\n" ,i, ctx_name, ctx_val);
-	}
-
-	int num_devices = iio_context_get_devices_count(ctx);
+    int num_devices = iio_context_get_devices_count(ctx);
 	printf("IIO context has %d devices:\n", num_devices);
-
 
 	for (int i=0; i < num_devices; i++) {
 		struct iio_device* dev = iio_context_get_device(ctx, i);
@@ -70,15 +49,16 @@ int main() {
 				printf("\n\t\t\tattr%d: %s \t value: %s", k, chn_attr, buff);
 			}
 		}
-
 	}
 
-	printf("\n\n ============================================ \n\n");
+
+    printf("\n\n ============================================ \n\n");
+    printf("Print ONLY device/channel attributes form %s: \n", DEVICE_NAME);
 
 	// Read values from voltage channels of ad5592r_s
 	// Find device by ID as well as channels
 
-	struct iio_device* dev = iio_context_find_device(ctx, "ad5592r_s");
+	struct iio_device* dev = iio_context_find_device(ctx, DEVICE_NAME);
 
 	if (!dev) {
 		printf("[ERROR] : Searching for %s but didn't find match\n", DEVICE_NAME);
@@ -105,7 +85,7 @@ int main() {
 		}
 	}
 
-	printf("\n\n ============================================ \n\n");
+    printf("\n\n ============================================ \n\n");
 	
 	// Increment raw value 1 step at a time at channel voltage1
 	const char* chn_id = "voltage1";
@@ -122,7 +102,6 @@ int main() {
 		printf("\nWritting %d to %s", i, attr);
 
 	}
-
 
 	iio_context_destroy(ctx);
 	return 0;
