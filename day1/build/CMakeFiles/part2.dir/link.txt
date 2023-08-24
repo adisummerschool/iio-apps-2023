@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/part2.dir/part2.c.o -o part2  -liio 

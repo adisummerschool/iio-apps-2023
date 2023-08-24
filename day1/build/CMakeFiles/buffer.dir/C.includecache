@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/analog/iio-apps-2023/day1/buffer.c
+stdio.h
+-
+stdlib.h
+-
+iio.h
+-
+unistd.h
+-
+time.h
+-
+string.h
+-
+

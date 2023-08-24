@@ -1,5 +1,3 @@
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/rebuild_cache.dir
 /home/analog/iio-apps-2023/day1/build/CMakeFiles/edit_cache.dir
-/home/analog/iio-apps-2023/day1/build/CMakeFiles/ctx_attr.dir
-/home/analog/iio-apps-2023/day1/build/CMakeFiles/hello_iio.dir
-/home/analog/iio-apps-2023/day1/build/CMakeFiles/hello.dir
+/home/analog/iio-apps-2023/day1/build/CMakeFiles/buffer.dir

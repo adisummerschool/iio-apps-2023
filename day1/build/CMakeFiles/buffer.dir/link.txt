@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/buffer.dir/buffer.c.o -o buffer  -liio 

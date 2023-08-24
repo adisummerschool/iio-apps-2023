@@ -130,124 +130,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ctx_attr
+# Target rules for targets named buffer
 
 # Build rule for target.
-ctx_attr: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ctx_attr
-.PHONY : ctx_attr
+buffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buffer
+.PHONY : buffer
 
 # fast build rule for target.
-ctx_attr/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ctx_attr.dir/build.make CMakeFiles/ctx_attr.dir/build
-.PHONY : ctx_attr/fast
+buffer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffer.dir/build.make CMakeFiles/buffer.dir/build
+.PHONY : buffer/fast
 
-#=============================================================================
-# Target rules for targets named hello_iio
+buffer.o: buffer.c.o
 
-# Build rule for target.
-hello_iio: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_iio
-.PHONY : hello_iio
-
-# fast build rule for target.
-hello_iio/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/build
-.PHONY : hello_iio/fast
-
-#=============================================================================
-# Target rules for targets named hello
-
-# Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello
-.PHONY : hello
-
-# fast build rule for target.
-hello/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-.PHONY : hello/fast
-
-ctx_attr.o: ctx_attr.c.o
-
-.PHONY : ctx_attr.o
+.PHONY : buffer.o
 
 # target to build an object file
-ctx_attr.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ctx_attr.dir/build.make CMakeFiles/ctx_attr.dir/ctx_attr.c.o
-.PHONY : ctx_attr.c.o
+buffer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffer.dir/build.make CMakeFiles/buffer.dir/buffer.c.o
+.PHONY : buffer.c.o
 
-ctx_attr.i: ctx_attr.c.i
+buffer.i: buffer.c.i
 
-.PHONY : ctx_attr.i
-
-# target to preprocess a source file
-ctx_attr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ctx_attr.dir/build.make CMakeFiles/ctx_attr.dir/ctx_attr.c.i
-.PHONY : ctx_attr.c.i
-
-ctx_attr.s: ctx_attr.c.s
-
-.PHONY : ctx_attr.s
-
-# target to generate assembly for a file
-ctx_attr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ctx_attr.dir/build.make CMakeFiles/ctx_attr.dir/ctx_attr.c.s
-.PHONY : ctx_attr.c.s
-
-hello.o: hello.c.o
-
-.PHONY : hello.o
-
-# target to build an object file
-hello.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.c.o
-.PHONY : hello.c.o
-
-hello.i: hello.c.i
-
-.PHONY : hello.i
+.PHONY : buffer.i
 
 # target to preprocess a source file
-hello.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.c.i
-.PHONY : hello.c.i
+buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffer.dir/build.make CMakeFiles/buffer.dir/buffer.c.i
+.PHONY : buffer.c.i
 
-hello.s: hello.c.s
+buffer.s: buffer.c.s
 
-.PHONY : hello.s
-
-# target to generate assembly for a file
-hello.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.c.s
-.PHONY : hello.c.s
-
-hello_iio.o: hello_iio.c.o
-
-.PHONY : hello_iio.o
-
-# target to build an object file
-hello_iio.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.o
-.PHONY : hello_iio.c.o
-
-hello_iio.i: hello_iio.c.i
-
-.PHONY : hello_iio.i
-
-# target to preprocess a source file
-hello_iio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.i
-.PHONY : hello_iio.c.i
-
-hello_iio.s: hello_iio.c.s
-
-.PHONY : hello_iio.s
+.PHONY : buffer.s
 
 # target to generate assembly for a file
-hello_iio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.s
-.PHONY : hello_iio.c.s
+buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffer.dir/build.make CMakeFiles/buffer.dir/buffer.c.s
+.PHONY : buffer.c.s
 
 # Help Target
 help:
@@ -257,18 +177,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ctx_attr"
-	@echo "... hello"
-	@echo "... hello_iio"
-	@echo "... ctx_attr.o"
-	@echo "... ctx_attr.i"
-	@echo "... ctx_attr.s"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
-	@echo "... hello_iio.o"
-	@echo "... hello_iio.i"
-	@echo "... hello_iio.s"
+	@echo "... buffer"
+	@echo "... buffer.o"
+	@echo "... buffer.i"
+	@echo "... buffer.s"
 .PHONY : help
 
 

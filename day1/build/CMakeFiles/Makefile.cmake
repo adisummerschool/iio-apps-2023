@@ -45,7 +45,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ctx_attr.dir/DependInfo.cmake"
-  "CMakeFiles/hello_iio.dir/DependInfo.cmake"
-  "CMakeFiles/hello.dir/DependInfo.cmake"
+  "CMakeFiles/buffer.dir/DependInfo.cmake"
   )
