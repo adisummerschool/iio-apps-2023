@@ -69,7 +69,7 @@ int main() {
 	printf("%d\n", chan_cnt);
 
 
-	for(int i=0; i<chan_cnt; i++){
+	//for(int i=0; i<chan_cnt; i++){
 		chan = iio_device_get_channel(dev, 1); //xpoz
 		chan_attr = iio_channel_get_attr(chan, 0);
 
