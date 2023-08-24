@@ -53,5 +53,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/read_all_channels.dir/DependInfo.cmake"
   "CMakeFiles/ctx_attr.dir/DependInfo.cmake"
   "CMakeFiles/hello_iio.dir/DependInfo.cmake"
+  "CMakeFiles/buf.dir/DependInfo.cmake"
   "CMakeFiles/hello.dir/DependInfo.cmake"
   )

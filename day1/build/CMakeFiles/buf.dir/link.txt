@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/buf.dir/buf.c.o -o buf  -liio 

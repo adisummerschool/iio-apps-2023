@@ -234,6 +234,19 @@ hello_iio/fast:
 .PHONY : hello_iio/fast
 
 #=============================================================================
+# Target rules for targets named buf
+
+# Build rule for target.
+buf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buf
+.PHONY : buf
+
+# fast build rule for target.
+buf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buf.dir/build.make CMakeFiles/buf.dir/build
+.PHONY : buf/fast
+
+#=============================================================================
 # Target rules for targets named hello
 
 # Build rule for target.
@@ -245,6 +258,33 @@ hello: cmake_check_build_system
 hello/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
+
+buf.o: buf.c.o
+
+.PHONY : buf.o
+
+# target to build an object file
+buf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buf.dir/build.make CMakeFiles/buf.dir/buf.c.o
+.PHONY : buf.c.o
+
+buf.i: buf.c.i
+
+.PHONY : buf.i
+
+# target to preprocess a source file
+buf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buf.dir/build.make CMakeFiles/buf.dir/buf.c.i
+.PHONY : buf.c.i
+
+buf.s: buf.c.s
+
+.PHONY : buf.s
+
+# target to generate assembly for a file
+buf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buf.dir/build.make CMakeFiles/buf.dir/buf.c.s
+.PHONY : buf.c.s
 
 calib_acc.o: calib_acc.c.o
 
@@ -497,6 +537,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... buf"
 	@echo "... calib_acc"
 	@echo "... ctx_attr"
 	@echo "... hello"
@@ -506,6 +547,9 @@ help:
 	@echo "... read_all_channels"
 	@echo "... read_temp"
 	@echo "... shock"
+	@echo "... buf.o"
+	@echo "... buf.i"
+	@echo "... buf.s"
 	@echo "... calib_acc.o"
 	@echo "... calib_acc.i"
 	@echo "... calib_acc.s"
