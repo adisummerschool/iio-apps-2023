@@ -45,7 +45,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/shock_buffer.dir/DependInfo.cmake"
+  "CMakeFiles/calib_accel.dir/DependInfo.cmake"
+  "CMakeFiles/shock_detect.dir/DependInfo.cmake"
+  "CMakeFiles/read_accel.dir/DependInfo.cmake"
+  "CMakeFiles/task3.dir/DependInfo.cmake"
   "CMakeFiles/ctx_attr.dir/DependInfo.cmake"
+  "CMakeFiles/task4.dir/DependInfo.cmake"
+  "CMakeFiles/task2.dir/DependInfo.cmake"
   "CMakeFiles/hello_iio.dir/DependInfo.cmake"
+  "CMakeFiles/read_adc.dir/DependInfo.cmake"
   "CMakeFiles/hello.dir/DependInfo.cmake"
   )

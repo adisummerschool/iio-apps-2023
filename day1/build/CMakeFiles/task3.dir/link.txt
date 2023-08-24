@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/task3.dir/task3.c.o -o task3  -liio 
