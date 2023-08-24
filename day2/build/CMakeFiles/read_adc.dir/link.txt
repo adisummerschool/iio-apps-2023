@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read_adc.dir/read_adc.c.o -o read_adc  -liio 

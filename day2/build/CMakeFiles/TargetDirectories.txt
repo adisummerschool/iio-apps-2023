@@ -1,0 +1,6 @@
+/home/kali/Documents/Practica/iio-apps-2023/day2/build/CMakeFiles/calib_accel.dir
+/home/kali/Documents/Practica/iio-apps-2023/day2/build/CMakeFiles/read_accel.dir
+/home/kali/Documents/Practica/iio-apps-2023/day2/build/CMakeFiles/read_adc.dir
+/home/kali/Documents/Practica/iio-apps-2023/day2/build/CMakeFiles/shock_detect.dir
+/home/kali/Documents/Practica/iio-apps-2023/day2/build/CMakeFiles/edit_cache.dir
+/home/kali/Documents/Practica/iio-apps-2023/day2/build/CMakeFiles/rebuild_cache.dir
