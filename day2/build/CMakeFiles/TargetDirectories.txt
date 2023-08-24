@@ -1,0 +1,8 @@
+/home/analog/Documents/iio-apps-2023/day2/build/CMakeFiles/edit_cache.dir
+/home/analog/Documents/iio-apps-2023/day2/build/CMakeFiles/shock_buffer.dir
+/home/analog/Documents/iio-apps-2023/day2/build/CMakeFiles/calib_accel.dir
+/home/analog/Documents/iio-apps-2023/day2/build/CMakeFiles/rebuild_cache.dir
+/home/analog/Documents/iio-apps-2023/day2/build/CMakeFiles/shock_detect.dir
+/home/analog/Documents/iio-apps-2023/day2/build/CMakeFiles/read_accel.dir
+/home/analog/Documents/iio-apps-2023/day2/build/CMakeFiles/shock_buffer_detect.dir
+/home/analog/Documents/iio-apps-2023/day2/build/CMakeFiles/read_adc.dir

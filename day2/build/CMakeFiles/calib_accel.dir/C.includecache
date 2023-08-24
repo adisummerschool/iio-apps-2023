@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/analog/Documents/iio-apps-2023/day2/calib_accel.c
+stdio.h
+-
+iio.h
+-
+unistd.h
+-
+
