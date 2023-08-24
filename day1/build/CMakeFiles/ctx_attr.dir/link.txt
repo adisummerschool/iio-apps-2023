@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/ctx_attr.dir/ctx_attr.c.o -o ctx_attr  -liio 

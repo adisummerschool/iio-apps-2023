@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/shock_detection.dir/shock_detection.c.o -o shock_detection  -liio 

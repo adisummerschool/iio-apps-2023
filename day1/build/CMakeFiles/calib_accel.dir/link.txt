@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/calib_accel.dir/calib_accel.c.o -o calib_accel  -liio 

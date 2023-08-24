@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/all_attr.dir/all_attr.c.o -o all_attr  -liio 

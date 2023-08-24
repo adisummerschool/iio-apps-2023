@@ -1,0 +1,6 @@
+{
+        "files.associations": {
+                "random": "c",
+                "read_accel": "cpp"
+        }
+}
