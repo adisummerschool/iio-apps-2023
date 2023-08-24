@@ -22,7 +22,7 @@ int main() {
     int dev_count = iio_context_get_devices_count(ctx);
 
     if (dev_count > 0) {
-        struct iio_device *dev = iio_context_get_device(ctx, 0);
+        struct iio_device *dev = iio_context_get_device(ctx, 1);
 
         const char* axis_names[] = {
             "xpoz",
