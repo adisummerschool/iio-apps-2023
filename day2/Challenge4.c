@@ -18,22 +18,37 @@
 
 #define URI "ip:10.76.84.240"
 
-// float raw2volts(int raw)
-// {
-// 	return raw * 2.5 / 4095;
-// }
-
-float raw2accel(int raw)
-{
-	return (float)raw / 4095;
-}
-
-float getAxis(struct iio_channel *channel)
+int getAxis(struct iio_channel *channel)
 {
 	char raw[5] = {0};
 	char *attr = iio_channel_get_attr(channel, 0);
 	iio_channel_attr_read(channel, attr, raw, 5);
-	return raw2accel(atoi(raw));
+	return atoi(raw);
+}
+
+void calibrate(int x, int y, int z)
+{
+	int threshold = 100;
+	char *outBuffer = "";
+	
+	if (x > threshold || x < -threshold)
+	{
+		outBuffer += "x: ";
+		outBuffer += x;
+		outBuffer += " | ";
+	}
+	if (y > threshold || y < -threshold)
+	{
+		outBuffer += "y: ";
+		outBuffer += y;
+		outBuffer += " | ";
+	}
+	if (z > threshold || z < -threshold)
+	{
+		outBuffer += "z: ";
+		outBuffer += z;
+		outBuffer += " | ";
+	}
 }
 
 int main()
@@ -70,13 +85,16 @@ int main()
 	printf("Channels found!\n");
 	while (true)
 	{
-		float x = getAxis(xpos) - getAxis(xneg);
-		float y = getAxis(ypos) - getAxis(yneg);
-		float z = getAxis(zpos) - getAxis(zneg);
+		int x = getAxis(xpos) - getAxis(xneg);
+		int y = getAxis(ypos) - getAxis(yneg);
+		int z = getAxis(zpos) - getAxis(zneg);
+
+		// calibration helper
+		calibrate(x, y, z);
 
 		// Print to console
-		printf(" x: %7.4f | y: %7.4f | z: %7.4f\r", x, y, z);
-		fflush(stdout);
+		// printf(" x: %4d | y: %4d | z: %4d\r", x, y, z);
+		// fflush(stdout);
 	}
 
 	iio_context_destroy(ctx);

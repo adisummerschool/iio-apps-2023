@@ -1,39 +1,16 @@
-/**
- * target output:
- *
- * x: <val g> | y: <val g> | z: <val g>
- */
-
-
-	// voltage0 : yneg;
-	// voltage1 : xpos;
-	// voltage2 : zpos;
-	// voltage3 : xneg;
-	// voltage4 : zneg;
-	// voltage5 : ypos;
-
-
 #include <stdio.h>
 #include <iio.h>
+#include <time.h>
 
 #define URI "ip:10.76.84.240"
+#define THRESHOLD 600
 
-// float raw2volts(int raw)
-// {
-// 	return raw * 2.5 / 4095;
-// }
-
-float raw2accel(int raw)
-{
-	return (float)raw / 4095;
-}
-
-float getAxis(struct iio_channel *channel)
+int getAxis(struct iio_channel *channel)
 {
 	char raw[5] = {0};
-	char *attr = iio_channel_get_attr(channel, 0);
+	const char *attr = iio_channel_get_attr(channel, 0);
 	iio_channel_attr_read(channel, attr, raw, 5);
-	return raw2accel(atoi(raw));
+	return atoi(raw);
 }
 
 int main()
@@ -66,17 +43,34 @@ int main()
 
 	struct iio_channel *zpos = iio_device_find_channel(ad5592r, "voltage2", false);
 	struct iio_channel *zneg = iio_device_find_channel(ad5592r, "voltage4", false);
-
 	printf("Channels found!\n");
+	
+	int prevX = 0, prevY = 0, prevZ = 0;
 	while (true)
 	{
-		float x = getAxis(xpos) - getAxis(xneg);
-		float y = getAxis(ypos) - getAxis(yneg);
-		float z = getAxis(zpos) - getAxis(zneg);
+		// Get axis values
+		int x = getAxis(xpos) - getAxis(xneg);
+		int y = getAxis(ypos) - getAxis(yneg);
+		int z = getAxis(zpos) - getAxis(zneg);
 
-		// Print to console
-		printf(" x: %7.4f | y: %7.4f | z: %7.4f\r", x, y, z);
-		fflush(stdout);
+		// Detect shake
+		if (abs(x - prevX) > THRESHOLD ||
+			abs(y - prevY) > THRESHOLD ||
+			abs(z - prevZ) > THRESHOLD)
+		{
+			char buff[20];
+			struct tm *sTm;
+
+			time_t now = time(0);
+			sTm = gmtime(&now);
+
+			strftime (buff, sizeof(buff), "%Y-%m-%d %H:%M:%S", sTm);
+			printf ("%s %s\n", buff, "Shake detected!");
+		}
+
+		prevX = x;
+		prevY = y;
+		prevZ = z;
 	}
 
 	iio_context_destroy(ctx);
