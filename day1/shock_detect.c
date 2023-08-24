@@ -1,7 +1,17 @@
 #include <stdio.h>
 #include <iio.h>
+#include <time.h>
 
 #define URI "ip:10.76.84.240"
+#define THRESHOLD 600
+
+int getAxis(struct iio_channel *channel)
+{
+	char raw[5] = {0};
+	const char *attr = iio_channel_get_attr(channel, 0);
+	iio_channel_attr_read(channel, attr, raw, 5);
+	return atoi(raw);
+}
 
 int main()
 {
@@ -24,45 +34,48 @@ int main()
 	}
 	printf("%s found!\n", deviceName);
 
-	//printf("Channel  Raw\tVolts\tAccel_g\n");
-	// Iterate through its channels
-	float v[7] = {0};
-	int ch_cnt = iio_device_get_channels_count(ad5592r);
-	for (int i = 0; i < ch_cnt - 1; ++i)
-	{
-		// Get channel
-		struct iio_channel *ch = iio_device_get_channel(ad5592r, i);
-		const char *chn_id = iio_channel_get_id(ch);
+	// Get channels
+	struct iio_channel *xpos = iio_device_find_channel(ad5592r, "voltage1", false);
+	struct iio_channel *xneg = iio_device_find_channel(ad5592r, "voltage3", false);
 
-		// Get channel's attributes
-		int attr_cnt = iio_channel_get_attrs_count(ch);
-		if (attr_cnt != 1)
+	struct iio_channel *ypos = iio_device_find_channel(ad5592r, "voltage5", false);
+	struct iio_channel *yneg = iio_device_find_channel(ad5592r, "voltage0", false);
+
+	struct iio_channel *zpos = iio_device_find_channel(ad5592r, "voltage2", false);
+	struct iio_channel *zneg = iio_device_find_channel(ad5592r, "voltage4", false);
+	printf("Channels found!\n");
+	
+	int prevX = 0, prevY = 0, prevZ = 0;
+	while (true)
+	{
+		// Get axis values
+		int x = getAxis(xpos) - getAxis(xneg);
+		int y = getAxis(ypos) - getAxis(yneg);
+		int z = getAxis(zpos) - getAxis(zneg);
+
+		// Detect shake
+		if (abs(x - prevX) > THRESHOLD ||
+			abs(y - prevY) > THRESHOLD ||
+			abs(z - prevZ) > THRESHOLD)
 		{
-			printf("Channel has %d attributes instead of 1!\nExiting...", attr_cnt);
-			return -1;
+			char buff[20];
+			struct tm *sTm;
+
+			time_t now = time(0);
+			sTm = gmtime(&now);
+
+			strftime (buff, sizeof(buff), "%Y-%m-%d %H:%M:%S", sTm);
+			printf ("%s %s\n", buff, "Shake detected!");
 		}
 
-		// Read raw value
-		char *attr = iio_channel_get_attr(ch, 0);
-		char dst[10] = {0};
-		iio_channel_attr_read(ch, attr, dst, 10);
-		//printf("%d\n",atoi(dst));
-		float volts = atoi(dst) * 2.5 / 4096; // raw * resolution * max_voltage
-		float accel_g = volts / 0.3; // volts / sensitivity
+		prevX = x;
+		prevY = y;
+		prevZ = z;
 
-		v[i] = accel_g;
-
-		//printf("%12s\t%s\t%f\t%f\t\n", chn_id, dst, volts, accel_g);
+		// Print to console
+		// printf(" x: %4d | y: %4d | z: %4d\r", x, y, z);
+		// fflush(stdout);
 	}
-
-	/*axa_x = v[0] - v[1];
-	axa_y = v[2] - v[3];
-	axa_z = v[4] - v[5];
-
-	printf("X = %f\n",axa_x);
-	printf("Z = %f\n",axa_y);
-	printf("Y = %f\n",axa_z);
-	*/
 
 	iio_context_destroy(ctx);
 	return 0;

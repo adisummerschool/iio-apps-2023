@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/shock_buffer.dir/shock_buffer.c.o -o shock_buffer  -liio 
