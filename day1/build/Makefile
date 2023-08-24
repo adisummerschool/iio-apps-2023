@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /home/analog/Documents/iio-apps-2023/day1/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -128,6 +128,58 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named shock_buffer
+
+# Build rule for target.
+shock_buffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shock_buffer
+.PHONY : shock_buffer
+
+# fast build rule for target.
+shock_buffer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/build
+.PHONY : shock_buffer/fast
+
+#=============================================================================
+# Target rules for targets named calib_accel
+
+# Build rule for target.
+calib_accel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calib_accel
+.PHONY : calib_accel
+
+# fast build rule for target.
+calib_accel/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_accel.dir/build.make CMakeFiles/calib_accel.dir/build
+.PHONY : calib_accel/fast
+
+#=============================================================================
+# Target rules for targets named shock_detect
+
+# Build rule for target.
+shock_detect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shock_detect
+.PHONY : shock_detect
+
+# fast build rule for target.
+shock_detect/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/build
+.PHONY : shock_detect/fast
+
+#=============================================================================
+# Target rules for targets named read_accel
+
+# Build rule for target.
+read_accel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_accel
+.PHONY : read_accel
+
+# fast build rule for target.
+read_accel/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_accel.dir/build.make CMakeFiles/read_accel.dir/build
+.PHONY : read_accel/fast
 
 #=============================================================================
 # Target rules for targets named task3
@@ -220,6 +272,33 @@ hello/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
+calib_accel.o: calib_accel.c.o
+
+.PHONY : calib_accel.o
+
+# target to build an object file
+calib_accel.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_accel.dir/build.make CMakeFiles/calib_accel.dir/calib_accel.c.o
+.PHONY : calib_accel.c.o
+
+calib_accel.i: calib_accel.c.i
+
+.PHONY : calib_accel.i
+
+# target to preprocess a source file
+calib_accel.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_accel.dir/build.make CMakeFiles/calib_accel.dir/calib_accel.c.i
+.PHONY : calib_accel.c.i
+
+calib_accel.s: calib_accel.c.s
+
+.PHONY : calib_accel.s
+
+# target to generate assembly for a file
+calib_accel.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_accel.dir/build.make CMakeFiles/calib_accel.dir/calib_accel.c.s
+.PHONY : calib_accel.c.s
+
 ctx_attr.o: ctx_attr.c.o
 
 .PHONY : ctx_attr.o
@@ -301,6 +380,33 @@ hello_iio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_iio.dir/build.make CMakeFiles/hello_iio.dir/hello_iio.c.s
 .PHONY : hello_iio.c.s
 
+read_accel.o: read_accel.c.o
+
+.PHONY : read_accel.o
+
+# target to build an object file
+read_accel.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_accel.dir/build.make CMakeFiles/read_accel.dir/read_accel.c.o
+.PHONY : read_accel.c.o
+
+read_accel.i: read_accel.c.i
+
+.PHONY : read_accel.i
+
+# target to preprocess a source file
+read_accel.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_accel.dir/build.make CMakeFiles/read_accel.dir/read_accel.c.i
+.PHONY : read_accel.c.i
+
+read_accel.s: read_accel.c.s
+
+.PHONY : read_accel.s
+
+# target to generate assembly for a file
+read_accel.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_accel.dir/build.make CMakeFiles/read_accel.dir/read_accel.c.s
+.PHONY : read_accel.c.s
+
 read_adc.o: read_adc.c.o
 
 .PHONY : read_adc.o
@@ -327,6 +433,60 @@ read_adc.s: read_adc.c.s
 read_adc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_adc.dir/build.make CMakeFiles/read_adc.dir/read_adc.c.s
 .PHONY : read_adc.c.s
+
+shock_buffer.o: shock_buffer.c.o
+
+.PHONY : shock_buffer.o
+
+# target to build an object file
+shock_buffer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/shock_buffer.c.o
+.PHONY : shock_buffer.c.o
+
+shock_buffer.i: shock_buffer.c.i
+
+.PHONY : shock_buffer.i
+
+# target to preprocess a source file
+shock_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/shock_buffer.c.i
+.PHONY : shock_buffer.c.i
+
+shock_buffer.s: shock_buffer.c.s
+
+.PHONY : shock_buffer.s
+
+# target to generate assembly for a file
+shock_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_buffer.dir/build.make CMakeFiles/shock_buffer.dir/shock_buffer.c.s
+.PHONY : shock_buffer.c.s
+
+shock_detect.o: shock_detect.c.o
+
+.PHONY : shock_detect.o
+
+# target to build an object file
+shock_detect.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.o
+.PHONY : shock_detect.c.o
+
+shock_detect.i: shock_detect.c.i
+
+.PHONY : shock_detect.i
+
+# target to preprocess a source file
+shock_detect.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.i
+.PHONY : shock_detect.c.i
+
+shock_detect.s: shock_detect.c.s
+
+.PHONY : shock_detect.s
+
+# target to generate assembly for a file
+shock_detect.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shock_detect.dir/build.make CMakeFiles/shock_detect.dir/shock_detect.c.s
+.PHONY : shock_detect.c.s
 
 task2.o: task2.c.o
 
@@ -417,13 +577,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... calib_accel"
 	@echo "... ctx_attr"
 	@echo "... hello"
 	@echo "... hello_iio"
+	@echo "... read_accel"
 	@echo "... read_adc"
+	@echo "... shock_buffer"
+	@echo "... shock_detect"
 	@echo "... task2"
 	@echo "... task3"
 	@echo "... task4"
+	@echo "... calib_accel.o"
+	@echo "... calib_accel.i"
+	@echo "... calib_accel.s"
 	@echo "... ctx_attr.o"
 	@echo "... ctx_attr.i"
 	@echo "... ctx_attr.s"
@@ -433,9 +600,18 @@ help:
 	@echo "... hello_iio.o"
 	@echo "... hello_iio.i"
 	@echo "... hello_iio.s"
+	@echo "... read_accel.o"
+	@echo "... read_accel.i"
+	@echo "... read_accel.s"
 	@echo "... read_adc.o"
 	@echo "... read_adc.i"
 	@echo "... read_adc.s"
+	@echo "... shock_buffer.o"
+	@echo "... shock_buffer.i"
+	@echo "... shock_buffer.s"
+	@echo "... shock_detect.o"
+	@echo "... shock_detect.i"
+	@echo "... shock_detect.s"
 	@echo "... task2.o"
 	@echo "... task2.i"
 	@echo "... task2.s"

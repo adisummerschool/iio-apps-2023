@@ -33,7 +33,6 @@ for (int j = 0; j < ch_count; j++)
 	struct iio_channel *ch = iio_device_get_channel(dev, j);
         // const char *ch_name = iio_channel_get_name(ch);
         // const char *ch_id = iio_channel_get_id(ch);
-
 	// const char *attr_name = iio_channel_get_attr(ch, 0);
         char attr_val[1024];
 

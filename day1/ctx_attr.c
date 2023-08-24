@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iio.h>
 
-#define URI "ip:10.76.84.157"
+#define URI "ip:10.76.84.156"
 
 int main()
 {
