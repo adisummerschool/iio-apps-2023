@@ -50,6 +50,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/shock_detect.dir/DependInfo.cmake"
   "CMakeFiles/read_val.dir/DependInfo.cmake"
   "CMakeFiles/dev-chan_attr.dir/DependInfo.cmake"
+  "CMakeFiles/shock_buffer.dir/DependInfo.cmake"
   "CMakeFiles/read_temp.dir/DependInfo.cmake"
   "CMakeFiles/ctx_attr.dir/DependInfo.cmake"
   "CMakeFiles/hello_iio.dir/DependInfo.cmake"

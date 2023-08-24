@@ -1,3 +1,5 @@
+// Read all device/channel attributes
+
 #include <stdio.h>
 #include <iio.h>
 

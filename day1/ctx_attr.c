@@ -1,3 +1,5 @@
+// Read all context attributes
+
 #include <stdio.h>
 #include <iio.h>
 #include <unistd.h>
